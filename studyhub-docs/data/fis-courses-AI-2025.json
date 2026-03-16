@@ -1,0 +1,365 @@
+[
+  {
+    "code": "3MA114",
+    "name": "Management pro informatiky",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "2PR101",
+    "name": "Právo",
+    "credits": 5,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "4IZ110",
+    "name": "Informační a komunikační technologie",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "4IT337",
+    "name": "Datové minimum",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["winter", "summer"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "4SA111",
+    "name": "Základy odborné práce",
+    "credits": 4,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "4MM106",
+    "name": "Matematika pro informatiky",
+    "credits": 7,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 1
+  },
+  {
+    "code": "3MG216",
+    "name": "Základy marketingu pro informatiky",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "4IT112",
+    "name": "UX design",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "4IT218",
+    "name": "Databáze",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "3MI202",
+    "name": "Mikroekonomie I",
+    "credits": 5,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "3MI204",
+    "name": "Makroekonomie I",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "4IT101",
+    "name": "Programování v Javě",
+    "credits": 7,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 3
+  },
+  {
+    "code": "3SG201",
+    "name": "Strategická analýza pro informatiky",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 3
+  },
+  {
+    "code": "4IT115",
+    "name": "Softwarové inženýrství",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 3
+  },
+  {
+    "code": "4EK212",
+    "name": "Kvantitativní management",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 3
+  },
+  {
+    "code": "4IZ210",
+    "name": "Zpracování informací a znalostí",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 3
+  },
+  {
+    "code": "4ST204",
+    "name": "Statistika pro informatiky",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4SA313",
+    "name": "Bezpečnost informačních systémů",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4IT216",
+    "name": "Analýza a návrh informačních systémů",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4SA317",
+    "name": "Bezpečnost cloudových technologií",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4SA330",
+    "name": "Systémy řízení bezpečnosti informací",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4IT353",
+    "name": "Klient/server aplikace v Javě",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "4IZ233",
+    "name": "Generativní AI",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 4
+  },
+  {
+    "code": "1FU201",
+    "name": "Účetnictví I.",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "11F201",
+    "name": "Finanční teorie, politika a instituce",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "4IT314",
+    "name": "Podnikové informační systémy",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "4EK317",
+    "name": "Simulační modely pro informatiky",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "4SA310",
+    "name": "IT Governance",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "1FP201",
+    "name": "Finance podniku",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 5
+  },
+  {
+    "code": "4SA315",
+    "name": "Bakalářský seminář",
+    "credits": 6,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 6
+  },
+  {
+    "code": "4IT472",
+    "name": "Řízení testování softwaru a nástrojů",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 6
+  },
+  {
+    "code": "4IZ232",
+    "name": "Umělá inteligence a její aplikace",
+    "credits": 7,
+    "group": "povinny",
+    "availableSemesters": ["summer"],
+    "recommendedSemester": 6
+  },
+  {
+    "code": "4SA331",
+    "name": "Fenomén myšlení pro management",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "4SA260",
+    "name": "Informace pro business",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "4IT323",
+    "name": "IT služby a provoz informačních systémů",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "4MM103",
+    "name": "Matematika 2",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["summer"]
+  },
+  {
+    "code": "4IT370",
+    "name": "Moderní trendy v informatice",
+    "credits": 3,
+    "group": "volitelny",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "4SA371",
+    "name": "Moderní trendy v informatice",
+    "credits": 3,
+    "group": "volitelny",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "4IZ260",
+    "name": "Úvod do datové analytiky",
+    "credits": 3,
+    "group": "volitelny",
+    "availableSemesters": ["winter"]
+  },
+  {
+    "code": "4SA220",
+    "name": "Web 2.0 a sociální sítě",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["summer"]
+  },
+  {
+    "code": "4IZ278",
+    "name": "Webové aplikace",
+    "credits": 6,
+    "group": "volitelny",
+    "availableSemesters": ["summer"]
+  },
+  {
+    "code": "cTVS1",
+    "name": "Tělocvik 1",
+    "credits": 0,
+    "group": "telocvik",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "cTVS2",
+    "name": "Tělocvik 2",
+    "credits": 0,
+    "group": "telocvik",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "2AJ211",
+    "name": "Angličtina pro ekonomické studium 1",
+    "credits": 3,
+    "group": "jazyk",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "2AJ212",
+    "name": "Angličtina pro ekonomické studium 2",
+    "credits": 3,
+    "group": "jazyk",
+    "availableSemesters": ["winter", "summer"]
+  },
+  {
+    "code": "5FI112",
+    "name": "Úvod do filosofie (pro informatiky)",
+    "credits": 3,
+    "group": "povinny",
+    "availableSemesters": ["winter"],
+    "recommendedSemester": 2
+  },
+  {
+    "code": "AIN",
+    "name": "Státní zkouška",
+    "credits": 9,
+    "group": "povinny",
+    "availableSemesters": ["winter", "summer"],
+    "recommendedSemester": 6
+  }
+]

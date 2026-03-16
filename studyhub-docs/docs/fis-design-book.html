@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIS VŠE — Design Book</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:       #009ee0;
+    --teal:       #00957d;
+    --teal-dark:  #007a68;
+    --teal-deep:  #003d35;
+    --navy:       #1a2d3a;
+    --dark-nav:   #1e2e28;
+    --white:      #ffffff;
+    --off-white:  #f4f7f6;
+    --muted:      #5a7060;
+    --text:       #1a1a1a;
+    --border:     #dde8e5;
+    --font-head:  'Barlow Condensed', sans-serif;
+    --font-body:  'Barlow', sans-serif;
+    --font-mono:  'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--off-white); color: var(--text); font-size: 15px; line-height: 1.6; }
+
+  /* TOPBAR */
+  .topbar { background: var(--dark-nav); color: rgba(255,255,255,.65); font-size: 12px; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 36px; }
+  .topbar a { color: rgba(255,255,255,.6); text-decoration: none; margin-right: 20px; }
+
+  /* NAVBAR */
+  .navbar { background: #fff; border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; gap: 32px; height: 60px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-vse { background: var(--teal); color: #fff; font-weight: 800; font-size: 18px; padding: 3px 8px; border-radius: 2px; }
+  .logo-faculty { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--text); line-height: 1.25; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; }
+  .nav-links a.active { color: var(--teal); border-bottom: 2px solid var(--teal); padding-bottom: 2px; }
+
+  /* HERO */
+  .hero { background: var(--teal-deep); position: relative; overflow: hidden; padding: 60px 48px; display: flex; align-items: flex-end; min-height: 210px; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(0,50,40,.9) 0%, rgba(0,149,125,.4) 100%); }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,149,125,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,149,125,.06) 1px, transparent 1px); background-size: 40px 40px; }
+  .hero-content { position: relative; }
+  .hero-eyebrow { display: inline-block; background: var(--teal); color: #fff; font-family: var(--font-head); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 3px 10px; margin-bottom: 12px; }
+  .hero h1 { font-family: var(--font-head); font-size: 68px; font-weight: 800; text-transform: uppercase; color: #fff; line-height: 1.0; }
+  .hero h1 span { display: block; background: var(--teal); padding: 0 10px; width: fit-content; margin-bottom: 4px; }
+  .hero-sub { font-family: var(--font-head); font-size: 26px; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,.8); margin-top: 8px; background: rgba(0,0,0,.3); padding: 2px 10px; width: fit-content; }
+
+  /* LAYOUT */
+  .page { max-width: 960px; margin: 0 auto; }
+  .section { padding: 56px 32px; }
+  .section + .section { border-top: 1px solid var(--border); }
+  .section-index { font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: .18em; margin-bottom: 6px; }
+  .section-title { font-family: var(--font-head); font-size: 42px; font-weight: 800; text-transform: uppercase; color: var(--text); line-height: 1.0; margin-bottom: 36px; }
+  .section-title .accent { color: var(--teal); }
+
+  /* COLORS */
+  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 14px; }
+  .swatch { border-radius: 6px; overflow: hidden; border: 1px solid var(--border); background: #fff; }
+  .swatch-bar { height: 80px; }
+  .swatch-body { padding: 12px 14px; }
+  .swatch-name { font-weight: 600; font-size: 14px; }
+  .swatch-hex  { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .swatch-use  { font-size: 11px; color: #8a9a8f; margin-top: 5px; line-height: 1.5; }
+  .role-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+  .role-card { flex: 1 1 200px; background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px; border-top: 3px solid var(--teal); }
+  .role-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 5px; }
+  .role-card p  { font-size: 12px; color: var(--muted); line-height: 1.55; }
+
+  /* TYPOGRAPHY */
+  .type-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
+  .type-item:last-child { border-bottom: none; }
+  .type-meta { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 8px; letter-spacing:.05em; text-transform: uppercase; }
+
+  /* COMP GRID */
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width:600px) { .comp-grid { grid-template-columns: 1fr; } }
+  .comp-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .comp-preview { padding: 20px; background: var(--off-white); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; min-height: 100px; border-bottom: 1px solid var(--border); }
+  .comp-label { padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+
+  /* BUTTONS */
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; border-radius: 3px; font-family: var(--font-body); font-size: 13px; font-weight: 600; border: 2px solid transparent; cursor: pointer; text-decoration: none; transition: background .12s; }
+  .btn-primary { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .btn-outline { background: transparent; color: var(--teal); border-color: var(--teal); }
+  .btn-dark    { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+  .btn-blue    { background: var(--blue); color: #fff; border-color: var(--blue); font-size: 12px; padding: 7px 16px; }
+
+  /* SQL EDITOR */
+  .sql-editor { background: var(--navy); border-radius: 4px; overflow: hidden; border: 1px solid rgba(0,158,224,.15); }
+  .sql-editor-topbar { background: rgba(255,255,255,.05); padding: 7px 14px; display: flex; align-items: center; gap: 7px; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .sql-editor-label { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,.3); margin-left: auto; }
+  .sql-editor-body { padding: 14px 16px; font-family: var(--font-mono); font-size: 12px; line-height: 1.8; color: #c8dce8; white-space: pre; }
+  .kw { color: #009ee0; font-weight: 600; }
+  .fn { color: #00c49f; }
+  .num { color: #9cdcfe; }
+
+  /* STEP CARD */
+  .step-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; border-left: 4px solid var(--teal); padding: 14px 16px; }
+  .step-number { font-family: var(--font-head); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); margin-bottom: 3px; }
+  .step-title  { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--text); }
+  .step-desc   { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .step-table  { margin-top: 10px; width: 100%; border-collapse: collapse; font-size: 11px; }
+  .step-table th { background: var(--teal); color: #fff; padding: 4px 8px; text-align: left; font-weight: 600; }
+  .step-table td { padding: 4px 8px; border-bottom: 1px solid var(--border); }
+
+  /* ALERTS */
+  .alert { padding: 11px 14px; border-radius: 3px; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 9px; border-left: 4px solid; }
+  .alert-ok   { background: rgba(0,149,125,.08); color: #00604f; border-color: var(--teal); }
+  .alert-err  { background: rgba(220,38,38,.07);  color: #b91c1c; border-color: #dc2626; }
+  .alert-info { background: rgba(0,158,224,.08); color: #005f8a; border-color: var(--blue); }
+
+  /* NEWS CARD */
+  .news-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; font-size: 13px; width: 140px; flex-shrink: 0; }
+  .news-img { height: 88px; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 17px; font-weight: 800; text-transform: uppercase; color: rgba(255,255,255,.9); letter-spacing: .05em; }
+  .news-body  { padding: 10px 12px; }
+  .news-date  { font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+  .news-title { font-weight: 600; font-size: 12px; line-height: 1.4; }
+
+  /* EVENT */
+  .event-row { display: flex; align-items: flex-start; gap: 11px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .event-date-box { background: var(--teal); color: #fff; min-width: 44px; text-align: center; padding: 5px 4px; border-radius: 2px; flex-shrink: 0; }
+  .event-day   { font-family: var(--font-head); font-size: 22px; font-weight: 800; line-height: 1; }
+  .event-month { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; opacity: .85; }
+  .event-type  { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+  .event-title { font-size: 13px; font-weight: 600; margin-top: 2px; }
+
+  /* TAGS */
+  .tag { display: inline-flex; align-items: center; padding: 4px 10px 4px 8px; border-radius: 2px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .03em; border-left: 3px solid; }
+  .tag-select { background: rgba(0,158,224,.10); color: #006fa8; border-color: var(--blue); }
+  .tag-from   { background: rgba(0,149,125,.10); color: #006b5e; border-color: var(--teal); }
+  .tag-where  { background: rgba(255,165,0,.10);  color: #9a6500; border-color: #ffa500; }
+  .tag-group  { background: rgba(147,51,234,.10); color: #6d28d9; border-color: #9333ea; }
+  .tag-having { background: rgba(236,72,153,.10); color: #be185d; border-color: #ec4899; }
+  .tag-order  { background: rgba(220,38,38,.10);  color: #b91c1c; border-color: #dc2626; }
+
+  /* INPUT */
+  .fis-input { width: 100%; padding: 9px 13px; border: 1.5px solid var(--border); border-radius: 3px; font-family: var(--font-body); font-size: 14px; color: var(--text); background: #fff; outline: none; transition: border-color .12s, box-shadow .12s; }
+  .fis-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,149,125,.12); }
+
+  /* BREADCRUMB */
+  .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; flex-wrap: wrap; }
+  .bc-badge  { background: var(--blue); color: #fff; font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 2px; text-transform: uppercase; letter-spacing: .04em; }
+  .bc-item   { color: var(--muted); }
+  .bc-sep    { color: #bbb; font-size: 10px; }
+  .bc-active { color: var(--teal); font-weight: 600; }
+
+  /* CLAUSE TABLE */
+  .clause-table { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+  .clause-table th { background: var(--teal-deep); color: rgba(255,255,255,.8); padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+  .clause-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .clause-table tr:last-child td { border-bottom: none; }
+  .clause-table tr:hover td { background: var(--off-white); }
+  .cdot { width: 20px; height: 20px; border-radius: 3px; display: inline-block; }
+
+  /* SPACING */
+  .space-row { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+  .space-col { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .space-bar { background: var(--teal); border-radius: 2px; opacity: .75; }
+  .space-val { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+
+  /* DO/DON'T */
+  .dd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media(max-width:580px){ .dd-grid { grid-template-columns: 1fr; } }
+  .dd-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 20px 22px; border-top: 4px solid; }
+  .dd-do { border-top-color: var(--teal); }
+  .dd-dont { border-top-color: #dc2626; }
+  .dd-head { font-family: var(--font-head); font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 14px; }
+  .dd-do .dd-head   { color: var(--teal); }
+  .dd-dont .dd-head { color: #dc2626; }
+  .dd-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .dd-list li { font-size: 13px; color: var(--text); padding-left: 18px; position: relative; }
+  .dd-list li::before { position: absolute; left: 0; font-weight: 700; }
+  .dd-do   .dd-list li::before { content: '✓'; color: var(--teal); }
+  .dd-dont .dd-list li::before { content: '✗'; color: #dc2626; }
+
+  /* CODE BLOCK */
+  .code-block { background: var(--navy); color: #a8d0e8; font-family: var(--font-mono); font-size: 12px; line-height: 1.9; padding: 24px 28px; border-radius: 4px; overflow-x: auto; border: 1px solid rgba(0,158,224,.12); }
+
+  /* FOOTER */
+  .site-footer { background: var(--teal-deep); color: rgba(255,255,255,.5); padding: 40px 32px; }
+  .footer-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; }
+  .footer-col h5 { color: var(--teal); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+  .footer-col p  { font-size: 12px; line-height: 1.85; }
+  .footer-bottom { background: rgba(0,0,0,.25); text-align: center; padding: 14px; font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.28); letter-spacing: .05em; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div><a href="#">Partneři</a><a href="#">Absolventi</a><a href="#">MERCH</a><a href="#">4CAST</a></div>
+  <div style="opacity:.4;font-size:11px;">SQL Visualizer · Design Book</div>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <div class="logo-vse">VŠE</div>
+    <div class="logo-faculty">Fakulta<br>informatiky a statistiky</div>
+  </div>
+  <nav class="nav-links">
+    <a href="#">O fakultě</a>
+    <a href="#">Studium</a>
+    <a href="#" class="active">SQL Visualizer</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Design Book · v1.0</div>
+    <h1><span>FIS</span>SQL Visualizer</h1>
+    <div class="hero-sub">Vizuální pravidla aplikace</div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- 01 BARVY -->
+  <div class="section">
+    <div class="section-index">01 — Barvy</div>
+    <h2 class="section-title">Barevná <span class="accent">paleta</span></h2>
+    <div class="color-grid">
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#009ee0;"></div>
+        <div class="swatch-body"><div class="swatch-name">VŠE Blue</div><div class="swatch-hex">#009ee0</div><div class="swatch-use">Pantone Process Blue C<br>R0 G158 B224 · SQL SELECT, linky</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#00957d;"></div>
+        <div class="swatch-body"><div class="swatch-name">FIS Teal</div><div class="swatch-hex">#00957d</div><div class="swatch-use">Pantone 334C · R0 G149 B125<br>Primární tlačítka, date badge, aktivní stavy</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#003d35;"></div>
+        <div class="swatch-body"><div class="swatch-name">Deep Teal</div><div class="swatch-hex">#003d35</div><div class="swatch-use">Footer, hero overlay,<br>tabulkové hlavičky</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#1a2d3a;"></div>
+        <div class="swatch-body"><div class="swatch-name">Navy</div><div class="swatch-hex">#1a2d3a</div><div class="swatch-use">SQL editor pozadí,<br>code bloky</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#f4f7f6; border-bottom: 1px solid #dde8e5;"></div>
+        <div class="swatch-body"><div class="swatch-name">Surface</div><div class="swatch-hex">#f4f7f6</div><div class="swatch-use">Pozadí stránky,<br>preview plochy karet</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-bar" style="background:#fff; border-bottom:1px solid #dde8e5;"></div>
+        <div class="swatch-body"><div class="swatch-name">White</div><div class="swatch-hex">#ffffff</div><div class="swatch-use">Karty, tabulky,<br>editor, modal panely</div></div>
+      </div>
+    </div>
+    <div class="role-row">
+      <div class="role-card" style="border-top-color:var(--teal);"><h4>FIS Teal — primární</h4><p>„Spustit dotaz", „Zkontrolovat", date badge, aktivní step karta, focus ring.</p></div>
+      <div class="role-card" style="border-top-color:var(--blue);"><h4>VŠE Blue — sekundární</h4><p>SQL SELECT klauzule, info alerty, linky, sekundární tlačítka.</p></div>
+      <div class="role-card" style="border-top-color:var(--teal-deep);"><h4>Deep Teal — plochy</h4><p>Hero, footer, hlavičky tabulek, overlay na fotky, navigační plochy.</p></div>
+    </div>
+  </div>
+
+  <!-- 02 TYPOGRAFIE -->
+  <div class="section">
+    <div class="section-index">02 — Typografie</div>
+    <h2 class="section-title">Písma & <span class="accent">typo</span></h2>
+    <div>
+      <div class="type-item">
+        <div class="type-meta">Barlow Condensed 800 · uppercase — Stránkové nadpisy, hero, panel tituly</div>
+        <div style="font-family:var(--font-head);font-size:58px;font-weight:800;text-transform:uppercase;line-height:1.0;">SQL Visualizer</div>
+      </div>
+      <div class="type-item">
+        <div class="type-meta">Barlow Condensed 700 · uppercase — Panel nadpisy, sekce</div>
+        <div style="font-family:var(--font-head);font-size:34px;font-weight:700;text-transform:uppercase;">Průběh zpracování dotazu</div>
+      </div>
+      <div class="type-item">
+        <div class="type-meta">Barlow 600 — UI labels, tlačítka, card tituly</div>
+        <div style="font-size:15px;font-weight:600;">Spustit dotaz &ensp;·&ensp; Zkontrolovat řešení &ensp;·&ensp; Zobrazit nápovědu</div>
+      </div>
+      <div class="type-item">
+        <div class="type-meta">Barlow 400 — Tělo textu, popisy, instrukce</div>
+        <div style="font-size:15px;max-width:600px;line-height:1.65;color:#3a4a3a;">Tento nástroj pomáhá studentům FIS pochopit, jak databázový stroj krok po kroku zpracovává SQL dotaz — od načtení tabulek přes filtraci až po výslednou množinu řádků.</div>
+      </div>
+      <div class="type-item">
+        <div class="type-meta">JetBrains Mono 400 — SQL kód, hex hodnoty, mono data</div>
+        <div style="font-family:var(--font-mono);font-size:14px;color:var(--teal);line-height:1.8;">SELECT jmeno, COUNT(*) FROM studenti WHERE rocnik = 2 GROUP BY jmeno;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 KOMPONENTY -->
+  <div class="section">
+    <div class="section-index">03 — Komponenty</div>
+    <h2 class="section-title">UI <span class="accent">Komponenty</span></h2>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-preview" style="flex-wrap:wrap;gap:10px;">
+          <button class="btn btn-primary">▶ Spustit dotaz</button>
+          <button class="btn btn-outline">Zkontrolovat</button>
+          <button class="btn btn-dark">Nápověda</button>
+          <button class="btn btn-blue">Info</button>
+        </div>
+        <div class="comp-label">Tlačítka — Primary / Outline / Dark / Blue</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-preview" style="display:block;padding:14px;">
+          <div class="sql-editor">
+            <div class="sql-editor-topbar">
+              <div class="dot" style="background:#ff5f57;"></div>
+              <div class="dot" style="background:#febc2e;"></div>
+              <div class="dot" style="background:#28c840;"></div>
+              <div class="sql-editor-label">query.sql</div>
+            </div>
+            <div class="sql-editor-body"><span class="kw">SELECT</span> jmeno, <span class="fn">COUNT</span>(*)
+<span class="kw">FROM</span>   studenti
+<span class="kw">WHERE</span>  rocnik = <span class="num">2</span>
+<span class="kw">GROUP BY</span> jmeno;</div>
+          </div>
+        </div>
+        <div class="comp-label">SQL Editor — navy, JetBrains Mono, syntax colors</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-preview" style="display:block;padding:14px;">
+          <div class="step-card">
+            <div class="step-number">Krok 2 / 5</div>
+            <div class="step-title">FROM studenti</div>
+            <div class="step-desc">Načtení celé tabulky před aplikací filtrů.</div>
+            <table class="step-table">
+              <tr><th>id</th><th>jmeno</th><th>rocnik</th></tr>
+              <tr><td>1</td><td>Novák</td><td>2</td></tr>
+              <tr><td>2</td><td>Černá</td><td>3</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="comp-label">Step karta — teal border-left, mini tabulka, mono titulek</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-preview" style="display:block;padding:14px;">
+          <div class="alert alert-ok">✓&nbsp; Správně! Výsledek odpovídá vzoru.</div>
+          <div style="height:8px;"></div>
+          <div class="alert alert-err">✗&nbsp; Chyba: chybí klauzule GROUP BY.</div>
+          <div style="height:8px;"></div>
+          <div class="alert alert-info">ℹ&nbsp; Tip: přidej ORDER BY na konec dotazu.</div>
+        </div>
+        <div class="comp-label">Feedback alerty — OK / Error / Info</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-preview" style="align-items:flex-start;flex-wrap:nowrap;gap:10px;">
+          <div class="news-card">
+            <div class="news-img" style="background:linear-gradient(135deg,var(--teal-deep),var(--teal));">Úkol 4.2</div>
+            <div class="news-body"><div class="news-date">10. 3. 2025</div><div class="news-title">SELECT + WHERE — základy filtrování</div></div>
+          </div>
+          <div class="news-card">
+            <div class="news-img" style="background:linear-gradient(135deg,#1a2d3a,#009ee0);">Úkol 4.8</div>
+            <div class="news-body"><div class="news-date">12. 3. 2025</div><div class="news-title">GROUP BY + agregace</div></div>
+          </div>
+        </div>
+        <div class="comp-label">Task karta — kopíruje FIS news card vzor</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-preview" style="display:block;padding:14px 18px;">
+          <div class="event-row">
+            <div class="event-date-box"><div class="event-day">16</div><div class="event-month">Bře</div></div>
+            <div><div class="event-type">Pondělí · 10:00</div><div class="event-title">Konzultace k úkolu 4.9</div></div>
+          </div>
+          <div class="event-row" style="border:none;">
+            <div class="event-date-box" style="background:var(--blue);"><div class="event-day">19</div><div class="event-month">Bře</div></div>
+            <div><div class="event-type">Čtvrtek · Deadline</div><div class="event-title">Odevzdání kapitoly 4.10</div></div>
+          </div>
+        </div>
+        <div class="comp-label">Date badge — přesný vzor FIS Akce sidebaru</div>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+      <div class="comp-card">
+        <div class="comp-preview" style="display:block;padding:16px;">
+          <input class="fis-input" value="SELECT * FROM studenti" /><div style="height:8px;"></div>
+          <input class="fis-input" placeholder="Zadej SQL dotaz..." />
+        </div>
+        <div class="comp-label">Input — teal focus ring, border-radius 3px</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-preview" style="flex-direction:column;gap:12px;align-items:flex-start;">
+          <div class="breadcrumb">
+            <span class="bc-badge">VŠE</span><span class="bc-sep">›</span>
+            <span class="bc-badge" style="background:var(--teal);">FIS</span><span class="bc-sep">›</span>
+            <span class="bc-item">Výuka</span><span class="bc-sep">›</span>
+            <span class="bc-active">SQL Visualizer</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="tag tag-select">SELECT</span><span class="tag tag-from">FROM</span>
+            <span class="tag tag-where">WHERE</span><span class="tag tag-group">GROUP BY</span>
+            <span class="tag tag-having">HAVING</span><span class="tag tag-order">ORDER BY</span>
+          </div>
+        </div>
+        <div class="comp-label">Breadcrumb + SQL clause tagy</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 KLAUZULE -->
+  <div class="section">
+    <div class="section-index">04 — SQL klauzule</div>
+    <h2 class="section-title">Barevné <span class="accent">kódování</span></h2>
+    <table class="clause-table">
+      <thead><tr><th>Klauzule</th><th>Barva</th><th>Hex</th><th>Pořadí</th><th>Pedagogická role</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag tag-from">FROM / JOIN</span></td><td><div class="cdot" style="background:#00957d;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#00957d</td><td style="font-family:var(--font-mono);font-size:12px;">1.</td><td style="font-size:12px;color:var(--muted);">Zdrojové tabulky a joiny</td></tr>
+        <tr><td><span class="tag tag-where">WHERE</span></td><td><div class="cdot" style="background:#ffa500;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#ffa500</td><td style="font-family:var(--font-mono);font-size:12px;">2.</td><td style="font-size:12px;color:var(--muted);">Filtrování před agregací</td></tr>
+        <tr><td><span class="tag tag-group">GROUP BY</span></td><td><div class="cdot" style="background:#9333ea;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#9333ea</td><td style="font-family:var(--font-mono);font-size:12px;">3.</td><td style="font-size:12px;color:var(--muted);">Seskupení a agregace</td></tr>
+        <tr><td><span class="tag tag-having">HAVING</span></td><td><div class="cdot" style="background:#ec4899;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#ec4899</td><td style="font-family:var(--font-mono);font-size:12px;">4.</td><td style="font-size:12px;color:var(--muted);">Filtrování skupin</td></tr>
+        <tr><td><span class="tag tag-select">SELECT</span></td><td><div class="cdot" style="background:#009ee0;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#009ee0</td><td style="font-family:var(--font-mono);font-size:12px;">5.</td><td style="font-size:12px;color:var(--muted);">Výběr a výpočet sloupců</td></tr>
+        <tr><td><span class="tag tag-order">ORDER BY</span></td><td><div class="cdot" style="background:#dc2626;"></div></td><td style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">#dc2626</td><td style="font-family:var(--font-mono);font-size:12px;">6.</td><td style="font-size:12px;color:var(--muted);">Závěrečné řazení výsledků</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 05 SPACING -->
+  <div class="section">
+    <div class="section-index">05 — Spacing & Layout</div>
+    <h2 class="section-title">Prostorový <span class="accent">systém</span></h2>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:28px;">Základní jednotka <strong>4px</strong>. Komponenty: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 80px.</p>
+    <div class="space-row">
+      <div class="space-col"><div class="space-bar" style="width:20px;height:4px;"></div><div class="space-val">4px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:24px;height:8px;"></div><div class="space-val">8px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:28px;height:12px;"></div><div class="space-val">12px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:32px;height:16px;"></div><div class="space-val">16px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:36px;height:24px;"></div><div class="space-val">24px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:40px;height:32px;"></div><div class="space-val">32px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:48px;height:48px;"></div><div class="space-val">48px</div></div>
+      <div class="space-col"><div class="space-bar" style="width:56px;height:80px;"></div><div class="space-val">80px</div></div>
+    </div>
+    <div class="role-row" style="margin-top:24px;">
+      <div class="role-card"><h4>Border Radius</h4><p>2–3px — tlačítka, tagy, inputy (FIS styl = velmi malý)<br>4–6px — karty, panely<br>99px — chips pouze</p></div>
+      <div class="role-card"><h4>Shadows</h4><p>Karty: <span style="font-family:var(--font-mono);font-size:11px;">0 1px 4px rgba(0,0,0,.07)</span><br>Hover: <span style="font-family:var(--font-mono);font-size:11px;">0 4px 12px rgba(0,0,0,.10)</span></p></div>
+      <div class="role-card"><h4>Kontejner</h4><p>Max-width stránky: 960px<br>SQL editor min-height: 120px<br>Výsledky min-height: 200px</p></div>
+    </div>
+  </div>
+
+  <!-- 06 DO/DON'T -->
+  <div class="section">
+    <div class="section-index">06 — Pravidla</div>
+    <h2 class="section-title">Dos & <span class="accent">Don'ts</span></h2>
+    <div class="dd-grid">
+      <div class="dd-card dd-do">
+        <div class="dd-head">Dělej ✓</div>
+        <ul class="dd-list">
+          <li>Barlow Condensed 800 uppercase pro nadpisy</li>
+          <li>FIS Teal #00957d jako primární akci</li>
+          <li>Každá klauzule konzistentně svoji barvu</li>
+          <li>SQL vždy JetBrains Mono, tmavé pozadí</li>
+          <li>Border-radius max 6px (žádné pill buttons)</li>
+          <li>Step karty s border-left barvy klauzule</li>
+          <li>Deep teal (#003d35) pro footer a tabulkové hlavičky</li>
+          <li>Date badge přesně čtvercový jako FIS web</li>
+        </ul>
+      </div>
+      <div class="dd-card dd-dont">
+        <div class="dd-head">Nedělej ✗</div>
+        <ul class="dd-list">
+          <li>Gradientová tlačítka (jen solid barva)</li>
+          <li>Inter / Roboto / system-ui písma</li>
+          <li>Červená mimo ORDER BY a chybové stavy</li>
+          <li>Pill tlačítka (border-radius 99px)</li>
+          <li>Teal jako barvu textu na bílém (kontrast)</li>
+          <li>Box-shadow blur větší než 12px</li>
+          <li>Vlastní barvy mimo definovanou paletu</li>
+          <li>Hero/banner bez dark overlay na fotce</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 CSS VARS -->
+  <div class="section">
+    <div class="section-index">07 — Implementace</div>
+    <h2 class="section-title">CSS <span class="accent">Proměnné</span></h2>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Zkopíruj do <code style="font-family:var(--font-mono);font-size:12px;">:root</code> svého projektu.</p>
+    <div class="code-block"><span style="color:#00957d;">:root</span> {
+  <span style="color:#4a9ab0;">/* ─ Značkové barvy ─ */</span>
+  --color-blue:       <span style="color:#009ee0;">#009ee0</span>;   <span style="color:#3a5060;">/* VŠE */</span>
+  --color-teal:       <span style="color:#00957d;">#00957d</span>;   <span style="color:#3a5060;">/* FIS primary */</span>
+  --color-teal-dark:  <span style="color:#3a5060;">#007a68</span>;
+  --color-teal-deep:  <span style="color:#3a5060;">#003d35</span>;   <span style="color:#3a5060;">/* footer, hero, tabulky */</span>
+  --color-navy:       <span style="color:#3a5060;">#1a2d3a</span>;   <span style="color:#3a5060;">/* SQL editor */</span>
+  --color-surface:    <span style="color:#3a5060;">#f4f7f6</span>;
+  --color-border:     <span style="color:#3a5060;">#dde8e5</span>;
+
+  <span style="color:#4a9ab0;">/* ─ SQL Klauzule (pořadí zpracování) ─ */</span>
+  --clause-from:      <span style="color:#00957d;">#00957d</span>;   <span style="color:#3a5060;">/* 1. FIS Teal */</span>
+  --clause-where:     <span style="color:#ffa500;">#ffa500</span>;   <span style="color:#3a5060;">/* 2. */</span>
+  --clause-group:     <span style="color:#9333ea;">#9333ea</span>;   <span style="color:#3a5060;">/* 3. */</span>
+  --clause-having:    <span style="color:#ec4899;">#ec4899</span>;   <span style="color:#3a5060;">/* 4. */</span>
+  --clause-select:    <span style="color:#009ee0;">#009ee0</span>;   <span style="color:#3a5060;">/* 5. VŠE Blue */</span>
+  --clause-order:     <span style="color:#dc2626;">#dc2626</span>;   <span style="color:#3a5060;">/* 6. */</span>
+
+  <span style="color:#4a9ab0;">/* ─ Typografie ─ */</span>
+  --font-head:  'Barlow Condensed', sans-serif;
+  --font-body:  'Barlow', sans-serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  <span style="color:#4a9ab0;">/* ─ Border Radius ─ */</span>
+  --radius-sm:   3px;
+  --radius-md:   6px;
+  --radius-pill: 99px;
+}</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo" style="margin-bottom:12px;">
+        <div class="logo-vse">VŠE</div>
+        <div class="logo-faculty" style="color:rgba(255,255,255,.55);">Fakulta<br>informatiky a statistiky</div>
+      </div>
+      <p>nám. W. Churchilla 1938/4<br>130 67 Praha 3 – Žižkov<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="47212e340731342269243d">[email&#160;protected]</a></p>
+    </div>
+    <div class="footer-col"><h5>SQL Visualizer</h5><p>Pedagogický nástroj pro studenty FIS.<br>Vizualizace průběhu SQL dotazu.<br>Verze 1.0 · Design Book 2025</p></div>
+    <div class="footer-col"><h5>Barvy</h5><p>VŠE Blue #009ee0<br>FIS Teal #00957d<br>Deep Teal #003d35<br>Navy #1a2d3a</p></div>
+    <div class="footer-col"><h5>Písma</h5><p>Barlow Condensed<br>Barlow<br>JetBrains Mono</p></div>
+  </div>
+</div>
+<div class="footer-bo
