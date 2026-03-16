@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VŠE StudyHub</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/course-detail.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="page">
+      <span class="topbar__text">Fakulta informatiky a statistiky</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="page navbar__inner">
+      <a href="#/" class="navbar__brand">
+        <span class="navbar__logo">VŠE</span>
+        <span class="navbar__title">StudyHub</span>
+      </a>
+      <div class="navbar__nav">
+        <a href="#/" class="navbar__link navbar__link--active">Přehled</a>
+        <a href="#/calendar" class="navbar__link">Kalendář</a>
+        <a href="#/course/new" class="navbar__link">Přidat předmět</a>
+        <a href="#/planner" class="navbar__link">Plánovač</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="app" class="page">
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="page">
+      <p class="footer__text">VŠE StudyHub &mdash; Semestrální dashboard pro studenty FIS VŠE v Praze</p>
+      <p class="footer__copy">&copy; 2026 StudyHub. Neoficiální studentský projekt.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

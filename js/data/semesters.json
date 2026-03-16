@@ -1,0 +1,30 @@
+[
+  {
+    "id": "LS-2026",
+    "name": "Letní semestr 2025/26",
+    "type": "summer",
+    "teachingStart": "2026-02-16",
+    "teachingEnd": "2026-05-17",
+    "examStart": "2026-05-18",
+    "examEnd": "2026-06-28",
+    "holidays": [
+      { "date": "2026-04-03", "name": "Velký pátek" },
+      { "date": "2026-04-06", "name": "Velikonoční pondělí" },
+      { "date": "2026-05-01", "name": "Svátek práce" },
+      { "date": "2026-05-08", "name": "Den vítězství" }
+    ]
+  },
+  {
+    "id": "ZS-2026",
+    "name": "Zimní semestr 2026/27",
+    "type": "winter",
+    "teachingStart": "2026-09-21",
+    "teachingEnd": "2026-12-20",
+    "examStart": "2027-01-04",
+    "examEnd": "2027-02-14",
+    "holidays": [
+      { "date": "2026-10-28", "name": "Den vzniku Československa" },
+      { "date": "2026-11-17", "name": "Den boje za svobodu" }
+    ]
+  }
+]

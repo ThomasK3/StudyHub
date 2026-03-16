@@ -1,0 +1,259 @@
+/* ==========================================================================
+   StudyHub — Course detail styles
+   ========================================================================== */
+
+/* ── Actions bar ──────────────────────────────────────────────────────────── */
+
+.detail__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.detail__code {
+  font-size: var(--text-sm);
+  color: var(--color-teal);
+  font-weight: var(--weight-semibold);
+}
+
+.detail__name {
+  font-size: var(--text-3xl);
+  margin-top: var(--space-1);
+}
+
+.detail__meta {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.detail__meta a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.badge--credit-lg {
+  width: 44px;
+  height: 44px;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+/* ── Two-column grid ──────────────────────────────────────────────────────── */
+
+.detail__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .detail__grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.detail__section {
+  margin-bottom: var(--space-8);
+}
+
+/* ── Component cards ──────────────────────────────────────────────────────── */
+
+.comp-card {
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-card__indicator {
+  height: 3px;
+}
+
+.comp-card__body {
+  padding: var(--space-3) var(--space-4);
+}
+
+.comp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.comp-card__name {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-md);
+}
+
+.comp-card__weight {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-md);
+  color: var(--color-teal);
+}
+
+.comp-card__points {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.comp-card__desc {
+  margin-top: var(--space-2);
+}
+
+.comp-card__bar {
+  height: 4px;
+  background-color: var(--color-off-white);
+}
+
+.comp-card__bar-fill {
+  height: 100%;
+  transition: width var(--transition-base);
+}
+
+/* ── Requirements ─────────────────────────────────────────────────────────── */
+
+.req-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.req-item__check {
+  color: var(--color-teal);
+  font-weight: var(--weight-bold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Grading scale ────────────────────────────────────────────────────────── */
+
+.grade-grid {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.grade-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  min-width: 64px;
+  border-top: 3px solid var(--grade-color);
+}
+
+.grade-cell__grade {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--text-xl);
+  color: var(--grade-color);
+}
+
+.grade-cell__pct {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item--past {
+  opacity: 0.5;
+}
+
+.timeline-item__dot {
+  position: absolute;
+  left: calc(-1 * var(--space-6) + 3px);
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-border);
+}
+
+.timeline-item__content {
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.timeline-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-item__title {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+}
+
+.timeline-item__date {
+  color: var(--color-muted);
+}
+
+.timeline-item__badges {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
