@@ -5,7 +5,7 @@ Semestrální dashboard pro studenty FIS VŠE v Praze. Na jednom místě vidíš
 ## Demo
 
 <!-- Po deploy na GitHub Pages doplnit odkaz -->
-> **[Živá ukázka →](https://tomaskanuch.github.io/StudyHub/)**
+> **[Živá ukázka →](https://thomask3.github.io/StudyHub/)**
 
 ## Funkce
 
