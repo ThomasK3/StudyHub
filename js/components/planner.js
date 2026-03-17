@@ -4,7 +4,7 @@
 
 import { getCourses, getSemester, getPlanner, updatePlanner } from '../store.js';
 import { callAI, parseAIResponse, ensureApiKey } from '../utils/ai.js';
-import { parseInsisExamPaste } from '../utils/insis-exams.js';
+import { parseInsisExamPaste, stableTermId, dedupeTerms } from '../utils/insis-exams.js';
 import { DAY_NAMES, formatDateCZ, daysUntil, getWeeksInRange } from '../utils/dates.js';
 
 const EVENT_TYPE_COLORS = {
@@ -573,28 +573,6 @@ function parseDateTimeCZ(dateTimeCZ) {
   const hh = m[4].padStart(2, '0');
   const min = m[5];
   return { dateISO: `${yyyy}-${mm}-${dd}`, time: `${hh}:${min}` };
-}
-
-function stableTermId(courseCode, dateISO, time, location) {
-  const base = `${courseCode}|${dateISO}|${time || ''}|${location || ''}`;
-  let h = 2166136261;
-  for (let i = 0; i < base.length; i++) {
-    h ^= base.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return `t_${(h >>> 0).toString(36)}`;
-}
-
-function dedupeTerms(terms) {
-  const seen = new Set();
-  const out = [];
-  for (const t of terms) {
-    const key = `${t.courseCode}|${t.date}|${t.time || ''}|${t.location || ''}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(t);
-  }
-  return out;
 }
 
 function renderPlanResult(data) {

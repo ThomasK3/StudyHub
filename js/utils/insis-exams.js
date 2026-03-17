@@ -108,7 +108,7 @@ function extractTypeLabel(normalized) {
   return `${base}${extra}`.trim();
 }
 
-function stableTermId(courseCode, dateISO, time, location) {
+export function stableTermId(courseCode, dateISO, time, location) {
   const base = `${courseCode}|${dateISO}|${time || ''}|${location || ''}`;
   let h = 2166136261;
   for (let i = 0; i < base.length; i++) {
@@ -118,7 +118,7 @@ function stableTermId(courseCode, dateISO, time, location) {
   return `t_${(h >>> 0).toString(36)}`;
 }
 
-function dedupeTerms(terms) {
+export function dedupeTerms(terms) {
   const seen = new Set();
   const out = [];
   for (const t of terms) {

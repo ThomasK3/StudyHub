@@ -105,8 +105,6 @@ export async function callAI(systemPrompt, userPrompt) {
  * @returns {object}
  */
 export function parseAIResponse(text) {
-  console.warn('parseAIResponse: raw AI response', text);
-
   let cleaned = text.trim();
 
   // Remove ```json ... ``` wrappers
@@ -145,9 +143,8 @@ export function parseAIResponse(text) {
     // fall through
   }
 
-  // c) User-friendly message only
-  alert('AI odpověď se nepodařilo zpracovat. Zkus vložit kratší text nebo rozdělit rozvrh zvlášť.');
-  throw new Error('AI_RESPONSE_PARSE_FAILED');
+  // c) Give up
+  throw new Error('AI odpověď se nepodařilo zpracovat. Zkus vložit kratší text nebo rozdělit rozvrh zvlášť.');
 }
 
 // ── API key dialog ───────────────────────────────────────────────────────────
