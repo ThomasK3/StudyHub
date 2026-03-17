@@ -6,7 +6,7 @@
 
 StudyHub je semestrální dashboard pro studenty FIS VŠE v Praze. Umožňuje na jednom místě vidět podmínky předmětů, termíny testů a zkoušek, a plánovat zkouškové období.
 
-Hlavní dokumentace: viz `README.md`
+Hlavní dokumentace: viz `docs/README-docs.md`
 
 ## Tech stack
 
@@ -95,13 +95,18 @@ Viz `README.md` sekce 5. Klíčové entity:
 - Před semestrem: "Přípravný týden", po výuce: "Zkouškové období"
 
 ### Formulář předmětu
-- Select předmětu z katalogu FIS (`data/fis-courses.json`) — filtrovat podle kódu i názvu
-- Dynamické seznamy pro složky hodnocení a termíny (přidávat/odebírat řádky)
+- Select předmětu z katalogu FIS (`data/fis-courses-AI-2025.json`) — filtrovat podle kódu i názvu
+- Dynamické seznamy pro složky hodnocení, termíny, rozvrh, literaturu
 - Validace: součet vah hodnocení by měl být 100%
+- Sekce: základní info → obsah předmětu (13 týdnů) → hodnocení → termíny → podmínky → zátěž → rozvrh → literatura → poznámky
 
 ### Persistence
-- Klíče: `studyhub_courses`, `studyhub_semester`, `studyhub_settings`
-- Ukládat po každé změně
+- **localStorage** — osobní data (klíče: `studyhub_courses`, `studyhub_semester`, `studyhub_settings`)
+- **Supabase** (volitelné) — sdílená databáze předvyplněných předmětů
+  - Anon key v kódu je OK (RLS)
+  - Aplikace MUSÍ fungovat i bez Supabase (offline-first)
+  - `js/utils/supabase.js` — veškerá Supabase komunikace
+  - Selhání = tiché, žádný error uživateli
 - Export/import jako JSON soubor
 
 ## Příkazy

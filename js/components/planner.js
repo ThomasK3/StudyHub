@@ -168,10 +168,13 @@ function renderPlanResult(data) {
     : '';
 
   const planCards = plan.map(item => {
-    const priorityColors = { high: 'var(--color-red)', medium: 'var(--color-amber)', low: 'var(--color-teal)' };
+    const priorityColors = { high: '#dc2626', medium: '#d97706', low: '#00957d' };
+    const priorityBg = { high: 'rgba(220,38,38,0.1)', medium: 'rgba(217,119,6,0.1)', low: 'rgba(0,149,125,0.1)' };
     const priorityLabels = { high: 'Vysoká', medium: 'Střední', low: 'Nízká' };
-    const color = priorityColors[item.priority] || priorityColors.medium;
-    const pLabel = priorityLabels[item.priority] || item.priority;
+    const p = item.priority || 'medium';
+    const color = priorityColors[p] || priorityColors.medium;
+    const bg = priorityBg[p] || priorityBg.medium;
+    const pLabel = priorityLabels[p] || p;
     const dateFmt = item.suggestedDate ? formatDateCZ(item.suggestedDate) : '—';
 
     return `
@@ -183,7 +186,7 @@ function renderPlanResult(data) {
               <span class="mono text-teal">${item.courseCode || ''}</span>
               <strong>${item.courseName || ''}</strong>
             </div>
-            <span class="badge" style="background-color:color-mix(in srgb, ${color} 15%, transparent);color:${color}">${pLabel} priorita</span>
+            <span class="badge" style="background-color:${bg};color:${color}">${pLabel} priorita</span>
           </div>
           <p class="text-sm"><strong>Doporučený termín:</strong> ${dateFmt}</p>
           ${item.reason ? `<p class="text-sm text-muted">${item.reason}</p>` : ''}

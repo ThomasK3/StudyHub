@@ -67,12 +67,7 @@ function renderRoute({ route, params }) {
       break;
 
     default: {
-      const titles = {
-        'course-new':  'Přidat předmět',
-        'course-edit': 'Upravit předmět',
-        'planner':     'Plánovač zkouškového',
-      };
-      const title = titles[route] || 'Stránka nenalezena';
+      const title = 'Stránka nenalezena';
       app.innerHTML = `
         <h2 class="section-title"><span class="accent">${title}</span></h2>
         <div class="card mt-6">

@@ -2,6 +2,21 @@
    StudyHub — Dashboard styles
    ========================================================================== */
 
+/* ── Status bar ──────────────────────────────────────────────────────────── */
+
+.dashboard__status {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-2);
+}
+
+.badge--online {
+  background-color: var(--color-teal-light);
+  color: var(--color-teal);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+}
+
 /* ── Stats row ────────────────────────────────────────────────────────────── */
 
 .stats-row {

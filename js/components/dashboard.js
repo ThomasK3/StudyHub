@@ -5,6 +5,7 @@
 import { getCourses, getSemester, getAllEvents } from '../store.js';
 import { getTeachingWeek, daysUntil, getDateParts } from '../utils/dates.js';
 import { navigate } from '../router.js';
+import { isSupabaseConfigured } from '../utils/supabase.js';
 
 const EVENT_TYPE_LABELS = {
   exam: 'Zkouška',
@@ -40,8 +41,13 @@ export function renderDashboard(container) {
   // Total credits
   const totalCredits = courses.reduce((sum, c) => sum + (c.credits || 0), 0);
 
+  const onlineBadge = isSupabaseConfigured()
+    ? '<span class="badge badge--online">Online databáze</span>'
+    : '';
+
   container.innerHTML = `
     <div class="dashboard">
+      ${onlineBadge ? `<div class="dashboard__status">${onlineBadge}</div>` : ''}
       ${renderStats(courses.length, totalCredits, weekLabel, semester)}
       ${renderUpcoming(upcoming)}
       ${renderCourseGrid(courses)}
