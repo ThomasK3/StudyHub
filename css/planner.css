@@ -75,6 +75,211 @@
   flex-wrap: wrap;
 }
 
+/* ── Planner import & exam calendar ───────────────────────────────────────── */
+
+.planner__import-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.planner-cal {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.planner-cal__header {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  background-color: var(--color-off-white);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.planner-cal__day-header {
+  padding: var(--space-2);
+  min-width: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+}
+
+.planner-cal__row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.planner-cal__cell {
+  min-height: 92px;
+  min-width: 0;
+  padding: var(--space-2);
+  border-right: var(--border-width) solid var(--color-border);
+  border-bottom: var(--border-width) solid var(--color-border);
+  background-color: var(--color-white);
+  overflow: visible;
+}
+
+.planner-cal__row .planner-cal__cell:last-child {
+  border-right: none;
+}
+
+.planner-cal__cell--outside {
+  background-color: color-mix(in srgb, var(--color-off-white) 70%, var(--color-white));
+}
+
+.planner-cal__cell--today {
+  outline: 2px solid color-mix(in srgb, var(--color-teal) 40%, transparent);
+  outline-offset: -2px;
+}
+
+.planner-cal__cell-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.planner-cal__num {
+  font-weight: 700;
+}
+
+.planner-cal__wk {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.planner-cal__chips {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.planner-chip {
+  appearance: none;
+  border: var(--border-width) solid color-mix(in srgb, var(--chip-color) 40%, var(--color-border));
+  background-color: color-mix(in srgb, var(--chip-color) 10%, var(--color-white));
+  color: color-mix(in srgb, var(--chip-color) 80%, black);
+  border-radius: var(--radius-md);
+  padding: 6px 8px;
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  text-align: left;
+  white-space: normal;
+}
+
+.planner-chip:hover {
+  border-color: color-mix(in srgb, var(--chip-color) 70%, var(--color-border));
+  background-color: color-mix(in srgb, var(--chip-color) 14%, var(--color-white));
+}
+
+.planner-chip--selected {
+  background-color: var(--chip-color);
+  border-color: var(--chip-color);
+  color: white;
+}
+
+.planner-chip--dimmed {
+  opacity: 0.35;
+  filter: grayscale(0.2);
+}
+
+.planner-chip__code {
+  font-weight: 700;
+}
+
+.planner-chip__time {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
+.planner-chip__left {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+}
+
+.planner-chip__right {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.planner-chip__type {
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.planner-chip--credit {
+  border-style: dashed;
+}
+
+.planner-chip--credit.planner-chip--selected {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, white 35%, transparent);
+}
+
+.planner-chip--exam .planner-chip__type {
+  letter-spacing: 0.02em;
+}
+
+.planner-chip--credit .planner-chip__type {
+  letter-spacing: 0.02em;
+}
+
+.planner-legend {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.planner-legend__item {
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-off-white);
+}
+
+.planner-legend__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.planner-legend__title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.planner-legend__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.planner-legend__meta {
+  margin-top: var(--space-1);
+}
+
 /* ── Spinner ──────────────────────────────────────────────────────────────── */
 
 .spinner {

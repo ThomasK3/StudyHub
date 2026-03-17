@@ -6,6 +6,7 @@ const KEYS = {
   courses:  'studyhub_courses',
   semester: 'studyhub_semester',
   settings: 'studyhub_settings',
+  planner:  'studyhub_planner',
 };
 
 /**
@@ -161,6 +162,7 @@ export function exportData() {
     courses: getCourses(),
     semester: getSemester(),
     settings: getSettings(),
+    planner: getPlanner(),
     exportedAt: new Date().toISOString(),
   }, null, 2);
 }
@@ -174,6 +176,32 @@ export function importData(json) {
   if (Array.isArray(data.courses)) save(KEYS.courses, data.courses);
   if (data.semester) save(KEYS.semester, data.semester);
   if (data.settings) save(KEYS.settings, data.settings);
+  if (data.planner) save(KEYS.planner, data.planner);
+}
+
+// ── Exam planner ─────────────────────────────────────────────────────────────
+
+const DEFAULT_PLANNER = {
+  rawText: '',
+  terms: [],
+  selectedByCourse: {},
+};
+
+/**
+ * @returns {{ rawText: string, terms: Array, selectedByCourse: Record<string,string> }}
+ */
+export function getPlanner() {
+  return { ...DEFAULT_PLANNER, ...load(KEYS.planner, {}) };
+}
+
+/**
+ * Merge partial updates into planner state.
+ * @param {object} partial
+ */
+export function updatePlanner(partial) {
+  const planner = getPlanner();
+  Object.assign(planner, partial);
+  save(KEYS.planner, planner);
 }
 
 // ── Demo seed ────────────────────────────────────────────────────────────────

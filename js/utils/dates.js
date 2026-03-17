@@ -135,6 +135,67 @@ export function getWeeksInMonth(year, month, semester) {
   return weeks;
 }
 
+/**
+ * Build calendar weeks for a date range (inclusive), split into Monday-based rows.
+ * Each week: { weekLabel, days: [{ date:Date, dayOfMonth, inRange, isToday, isoDate }] }
+ *
+ * @param {string} startISO - YYYY-MM-DD
+ * @param {string} endISO - YYYY-MM-DD
+ * @returns {Array}
+ */
+export function getWeeksInRange(startISO, endISO) {
+  const start = toLocal(startISO);
+  const end = toLocal(endISO);
+  if (!(start instanceof Date) || Number.isNaN(start.getTime())) return [];
+  if (!(end instanceof Date) || Number.isNaN(end.getTime())) return [];
+
+  // Normalize to midnight local
+  start.setHours(0, 0, 0, 0);
+  end.setHours(0, 0, 0, 0);
+
+  // Find Monday of the week containing start
+  const startDow = (start.getDay() + 6) % 7; // 0=Mon
+  const cursor = new Date(start);
+  cursor.setDate(cursor.getDate() - startDow);
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayISO = toISO(today);
+
+  const weeks = [];
+
+  while (true) {
+    const days = [];
+    const monday = new Date(cursor);
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(cursor);
+      const iso = toISO(d);
+      const inRange = d >= start && d <= end;
+      days.push({
+        date: d,
+        dayOfMonth: d.getDate(),
+        inRange,
+        isToday: iso === todayISO,
+        isoDate: iso,
+      });
+      cursor.setDate(cursor.getDate() + 1);
+    }
+
+    weeks.push({ weekLabel: '', days });
+
+    // Stop once we've completed the week that contains `end`
+    if (monday > end) break;
+    // Safety
+    if (weeks.length > 12) break;
+  }
+
+  // Trim leading/trailing weeks that have no inRange days
+  while (weeks.length && weeks[0].days.every(d => !d.inRange)) weeks.shift();
+  while (weeks.length && weeks[weeks.length - 1].days.every(d => !d.inRange)) weeks.pop();
+
+  return weeks;
+}
+
 // ── Relative time ────────────────────────────────────────────────────────────
 
 /**

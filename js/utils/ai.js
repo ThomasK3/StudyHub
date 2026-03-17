@@ -8,6 +8,7 @@ const AI_CONFIG = {
   provider: 'gemini',
   model: 'gemini-2.5-flash',
   endpoint: 'https://generativelanguage.googleapis.com/v1beta/models',
+  maxOutputTokens: 8000,
 };
 
 // ── API key management ───────────────────────────────────────────────────────
@@ -55,7 +56,7 @@ export async function callAI(systemPrompt, userPrompt) {
     }],
     generationConfig: {
       temperature: 0.1,
-      maxOutputTokens: 4000,
+      maxOutputTokens: AI_CONFIG.maxOutputTokens,
     },
   };
 
@@ -104,6 +105,8 @@ export async function callAI(systemPrompt, userPrompt) {
  * @returns {object}
  */
 export function parseAIResponse(text) {
+  console.warn('parseAIResponse: raw AI response', text);
+
   let cleaned = text.trim();
 
   // Remove ```json ... ``` wrappers
@@ -112,9 +115,39 @@ export function parseAIResponse(text) {
 
   try {
     return JSON.parse(cleaned);
-  } catch (err) {
-    throw new Error(`AI odpověď není platný JSON: ${err.message}`);
+  } catch {
+    // fall through
   }
+
+  // a) Try trimming to the last likely JSON ending: "}]” or "}"
+  try {
+    const lastArrayEnd = cleaned.lastIndexOf('}]');
+    const lastObjectEnd = cleaned.lastIndexOf('}');
+    const cutAt = Math.max(
+      lastArrayEnd >= 0 ? lastArrayEnd + 2 : -1,
+      lastObjectEnd >= 0 ? lastObjectEnd + 1 : -1,
+    );
+    if (cutAt > 0) {
+      return JSON.parse(cleaned.slice(0, cutAt));
+    }
+  } catch {
+    // fall through
+  }
+
+  // b) Try extracting the first "{" ... last "}" span
+  try {
+    const firstBrace = cleaned.indexOf('{');
+    const lastBrace = cleaned.lastIndexOf('}');
+    if (firstBrace >= 0 && lastBrace > firstBrace) {
+      return JSON.parse(cleaned.slice(firstBrace, lastBrace + 1));
+    }
+  } catch {
+    // fall through
+  }
+
+  // c) User-friendly message only
+  alert('AI odpověď se nepodařilo zpracovat. Zkus vložit kratší text nebo rozdělit rozvrh zvlášť.');
+  throw new Error('AI_RESPONSE_PARSE_FAILED');
 }
 
 // ── API key dialog ───────────────────────────────────────────────────────────
