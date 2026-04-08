@@ -2,7 +2,7 @@
    StudyHub — Exam planner (deterministic scheduler + AI advisor)
    ========================================================================== */
 
-import { getCourses, getSemester, getPlanner, updatePlanner } from '../store.js';
+import { getCourses, getCoursesForSemester, getSemester, getPlanner, updatePlanner, getActiveSemesterLabel } from '../store.js';
 import { callAI, parseAIResponse, ensureApiKey } from '../utils/ai.js';
 import { parseInsisExamPaste, stableTermId, dedupeTerms } from '../utils/insis-exams.js';
 import { DAY_NAMES, formatDateCZ, daysUntil, getWeeksInRange } from '../utils/dates.js';
@@ -37,7 +37,8 @@ Vrať POUZE platný JSON (bez komentářů, bez markdown):
  * @param {HTMLElement} container
  */
 export function renderPlanner(container) {
-  const courses = getCourses();
+  const activeSemLabel = getActiveSemesterLabel();
+  const courses = activeSemLabel ? getCoursesForSemester(activeSemLabel) : getCourses();
   const semester = getSemester();
   const planner = getPlanner();
   const rules = planner.rules || DEFAULT_RULES;
@@ -467,8 +468,8 @@ function renderAIAdvice(data) {
     : '';
 
   const cards = courseAdvice.map(item => {
-    const priorityColors = { high: '#dc2626', medium: '#d97706', low: '#00957d' };
-    const priorityBg = { high: 'rgba(220,38,38,0.1)', medium: 'rgba(217,119,6,0.1)', low: 'rgba(0,149,125,0.1)' };
+    const priorityColors = { high: 'var(--color-priority-high)', medium: 'var(--color-priority-medium)', low: 'var(--color-priority-low)' };
+    const priorityBg = { high: 'var(--color-priority-high-bg)', medium: 'var(--color-priority-medium-bg)', low: 'var(--color-priority-low-bg)' };
     const priorityLabels = { high: 'Vysoká', medium: 'Střední', low: 'Nízká' };
     const p = item.priority || 'medium';
     const color = priorityColors[p] || priorityColors.medium;

@@ -7,6 +7,10 @@ import { navigate } from '../router.js';
 import { renderAIParserSection, bindAIParser, renderAISummaryButton, bindAISummary } from './ai-parser.js';
 import { isSupabaseConfigured, fetchSharedCourse, submitSharedCourse } from '../utils/supabase.js';
 
+const CATALOG_TIP = isSupabaseConfigured()
+  ? '<div class="alert alert--info mb-4"><strong>Tip:</strong> V <a href="#/browse" style="text-decoration:underline">katalogu</a> najdeš předvyplněné předměty — stačí kliknout a přidat.</div>'
+  : '';
+
 // ── Constants ────────────────────────────────────────────────────────────────
 
 const SEMESTERS = ['ZS 2025/26', 'LS 2025/26', 'ZS 2026/27', 'LS 2026/27'];
@@ -185,6 +189,7 @@ function render(wrapper, catalog, isEdit) {
       <h2 class="section-title">${isEdit ? 'Upravit' : 'Přidat'} <span class="accent">předmět</span></h2>
     </div>
 
+    ${!isEdit ? CATALOG_TIP : ''}
     ${!isEdit ? renderAIParserSection() : ''}
 
     <!-- SHARED COURSE ALERT -->

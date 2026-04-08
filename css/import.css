@@ -1,0 +1,81 @@
+/* ==========================================================================
+   StudyHub — 4plan import styles
+   ========================================================================== */
+
+.fourplan {
+  max-width: 800px;
+}
+
+/* ── Semester preview ────────────────────────────────────────────────────── */
+
+.fp-semester {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+}
+
+.fp-semester--current {
+  border-color: var(--color-teal);
+}
+
+.fp-semester__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-off-white);
+  border-bottom: var(--border-width) solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.fp-semester__label {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+}
+
+.fp-semester__courses {
+  padding: var(--space-2) var(--space-3);
+}
+
+/* ── Course row ──────────────────────────────────────────────────────────── */
+
+.fp-course {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+  font-size: var(--text-sm);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.fp-course:last-child {
+  border-bottom: none;
+}
+
+.fp-course span:nth-child(2) {
+  flex: 1;
+}
+
+/* ── Semester checkboxes ─────────────────────────────────────────────────── */
+
+.fp-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.fp-check:hover {
+  border-color: var(--color-teal);
+}
+
+.fp-check input[type="checkbox"] {
+  accent-color: var(--color-teal);
+}

@@ -116,6 +116,63 @@
   margin-top: var(--space-2);
 }
 
+.comp-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.comp-card__status {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-md);
+}
+
+.comp-card__status--pass {
+  color: var(--color-green);
+}
+
+.comp-card__status--fail {
+  color: var(--color-red);
+}
+
+.comp-card--completed {
+  opacity: 0.65;
+}
+
+.comp-card__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.comp-card__check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.comp-card__earned-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.comp-card__earned-label .input--sm {
+  width: 64px;
+}
+
+.comp-card__score {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-teal);
+}
+
 .comp-card__bar {
   height: 4px;
   background-color: var(--color-off-white);
@@ -124,6 +181,72 @@
 .comp-card__bar-fill {
   height: 100%;
   transition: width var(--transition-base);
+}
+
+/* ── Calculator ──────────────────────────────────────────────────────────── */
+
+.calc-card {
+  border-left: 3px solid var(--color-teal);
+}
+
+.calc-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.calc-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.calc-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.calc-row__grade {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--text-xl);
+  min-width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.calc-row__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.calc-row__bar {
+  height: 6px;
+  background-color: var(--color-off-white);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: var(--space-1);
+}
+
+.calc-row__bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+.calc-row--guaranteed {
+  background-color: var(--color-green-light);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.calc-row--impossible {
+  opacity: 0.5;
 }
 
 /* ── Requirements ─────────────────────────────────────────────────────────── */
@@ -371,6 +494,35 @@
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.detail__schedule--interactive .schedule-row {
+  cursor: pointer;
+  transition: background-color var(--transition-base), opacity var(--transition-base);
+}
+
+.detail__schedule--interactive .schedule-row:hover {
+  background-color: var(--color-off-white);
+  opacity: 1 !important;
+}
+
+.detail__schedule--interactive .schedule-row--selected {
+  background-color: var(--color-teal-light);
+  opacity: 1 !important;
+}
+
+.detail__schedule--interactive .schedule-row--selected td {
+  color: var(--color-text);
+}
+
+/* ── Score pass/fail colors ───────────────────────────────────────────────── */
+
+.comp-card__score--pass {
+  color: var(--color-green);
+}
+
+.comp-card__score--fail {
+  color: var(--color-red);
 }
 
 /* ── Literature ──────────────────────────────────────────────────────────── */

@@ -3,10 +3,12 @@
    ========================================================================== */
 
 const KEYS = {
-  courses:  'studyhub_courses',
-  semester: 'studyhub_semester',
-  settings: 'studyhub_settings',
-  planner:  'studyhub_planner',
+  courses:        'studyhub_courses',
+  semester:       'studyhub_semester',
+  settings:       'studyhub_settings',
+  planner:        'studyhub_planner',
+  studyPlan:      'studyhub_studyplan',
+  activeSemester: 'studyhub_active_semester',
 };
 
 /**
@@ -84,6 +86,50 @@ export function deleteCourse(id) {
   save(KEYS.courses, courses);
 }
 
+/**
+ * Update progress for a course component.
+ * @param {string} courseId
+ * @param {number} componentIndex
+ * @param {{ earned?: number|null, completed?: boolean }} update
+ */
+export function updateProgress(courseId, componentIndex, update) {
+  const course = getCourse(courseId);
+  if (!course) return;
+  const comps = course.components || [];
+  if (!Array.isArray(course.progress) || course.progress.length !== comps.length) {
+    course.progress = comps.map(() => ({ componentIndex: 0, earned: null, completed: false }));
+    course.progress.forEach((p, i) => { p.componentIndex = i; });
+  }
+  if (componentIndex < 0 || componentIndex >= course.progress.length) return;
+  Object.assign(course.progress[componentIndex], update);
+  saveCourse(course);
+}
+
+/**
+ * Get normalized progress array for a course (always matches components length).
+ * @param {object} course
+ * @returns {Array<{ componentIndex: number, earned: number|null, completed: boolean }>}
+ */
+export function getProgress(course) {
+  const comps = course?.components || [];
+  if (Array.isArray(course?.progress) && course.progress.length === comps.length) {
+    return course.progress;
+  }
+  return comps.map((_, i) => ({ componentIndex: i, earned: null, completed: false }));
+}
+
+/**
+ * Update selectedSchedule indices for a course.
+ * @param {string} courseId
+ * @param {number[]} selectedSchedule
+ */
+export function updateScheduleSelection(courseId, selectedSchedule) {
+  const course = getCourse(courseId);
+  if (!course) return;
+  course.selectedSchedule = selectedSchedule;
+  saveCourse(course);
+}
+
 // ── Semester ─────────────────────────────────────────────────────────────────
 
 /**
@@ -105,6 +151,7 @@ export function setSemester(semester) {
 const DEFAULT_SETTINGS = {
   apiKey: '',
   theme: 'light',
+  activeSemesterNumber: null,
 };
 
 /**
@@ -131,7 +178,8 @@ export function updateSettings(partial) {
  * @returns {Array}
  */
 export function getAllEvents() {
-  const courses = getCourses();
+  const label = getActiveSemesterLabel();
+  const courses = label ? getCoursesForSemester(label) : getCourses();
   const events = [];
 
   for (const course of courses) {
@@ -151,6 +199,154 @@ export function getAllEvents() {
   return events;
 }
 
+// ── Study plan ──────────────────────────────────────────────────────────────
+
+const DEFAULT_STUDY_PLAN = {
+  startYear: '',
+  programName: '',
+  semesters: [],
+  importedAt: null,
+};
+
+/**
+ * @returns {{ startYear: string, programName: string, semesters: Array, importedAt: string|null }}
+ */
+export function getStudyPlan() {
+  return { ...DEFAULT_STUDY_PLAN, ...load(KEYS.studyPlan, {}) };
+}
+
+/**
+ * Save imported study plan data.
+ * @param {{ startYear: string, programName: string, semesters: Array }} plan
+ */
+export function saveStudyPlan(plan) {
+  save(KEYS.studyPlan, { ...plan, importedAt: new Date().toISOString() });
+}
+
+/**
+ * Get the active semester number from settings.
+ * @returns {number|null}
+ */
+export function getActiveSemesterNumber() {
+  return getSettings().activeSemesterNumber || null;
+}
+
+/**
+ * Set the active semester number.
+ * @param {number|null} num
+ */
+export function setActiveSemesterNumber(num) {
+  updateSettings({ activeSemesterNumber: num });
+}
+
+/**
+ * Get courses filtered by the active semester (matching semester string).
+ * If no active semester is set, returns all courses.
+ * @param {string} [semesterLabel] - e.g. "LS 2025/26"
+ * @returns {Array}
+ */
+export function getCoursesForSemester(semesterLabel) {
+  const courses = getCourses();
+  if (!semesterLabel) return courses;
+  return courses.filter(c => c.semester === semesterLabel);
+}
+
+/**
+ * Get the active semester label (e.g. "LS 2025/26"), or null for "all semesters".
+ * @returns {string|null}
+ */
+export function getActiveSemesterLabel() {
+  return load(KEYS.activeSemester, null);
+}
+
+/**
+ * Persist the active semester label. Pass null to show all semesters.
+ * @param {string|null} label
+ */
+export function setActiveSemesterLabel(label) {
+  save(KEYS.activeSemester, label);
+}
+
+/**
+ * Derive the sorted list of unique semester labels from the user's actual course data.
+ * Returns labels like "ZS 2025/26", "LS 2025/26" sorted oldest-first.
+ * @returns {string[]}
+ */
+export function getAvailableSemesters() {
+  const seen = new Set();
+  const result = [];
+  for (const c of getCourses()) {
+    if (c.semester && !seen.has(c.semester)) {
+      seen.add(c.semester);
+      result.push(c.semester);
+    }
+  }
+  return result.sort((a, b) => {
+    // Parse "ZS 2025/26" → sort key: year * 10 + (ZS=1, LS=2)
+    const key = s => {
+      const m = s.match(/^(ZS|LS)\s+(\d{4})\/\d{2}$/);
+      if (!m) return 0;
+      return parseInt(m[2]) * 10 + (m[1] === 'ZS' ? 1 : 2);
+    };
+    return key(a) - key(b);
+  });
+}
+
+/**
+ * Import courses from a parsed 4plan semester into the store.
+ * Only adds courses that don't already exist (by code + semester).
+ * @param {Array<{ code: string, name: string, credits: number, group: string }>} planCourses
+ * @param {string} semesterLabel - e.g. "LS 2025/26"
+ * @returns {{ added: number, skipped: number }}
+ */
+export function importFourPlanCourses(planCourses, semesterLabel) {
+  const existing = getCourses();
+  let added = 0;
+  let skipped = 0;
+
+  for (const pc of planCourses) {
+    const alreadyExists = existing.some(
+      c => c.code.toUpperCase() === pc.code.toUpperCase() && c.semester === semesterLabel
+    );
+    if (alreadyExists) {
+      skipped++;
+      continue;
+    }
+
+    saveCourse({
+      code: pc.code,
+      name: pc.name,
+      credits: pc.credits,
+      semester: semesterLabel,
+      group: pc.group,
+      lecturer: '',
+      description: '',
+      aiSummary: '',
+      learningOutcomes: [],
+      weeklyTopics: [],
+      workload: { lectures: 0, seminars: 0, project: 0, testPrep: 0, examPrep: 0, total: 0 },
+      schedule: [],
+      allLecturers: [],
+      literature: { required: [], recommended: [] },
+      components: [],
+      events: [],
+      requirements: [],
+      gradingScale: [
+        { grade: '1', label: 'Výborně', minPercent: 90 },
+        { grade: '2', label: 'Velmi dobře', minPercent: 75 },
+        { grade: '3', label: 'Dobře', minPercent: 60 },
+        { grade: '4', label: 'Nevyhověl', minPercent: 0 },
+      ],
+      notes: '',
+      insisUrl: '',
+      source: 'fourplan',
+    });
+    added++;
+  }
+
+  return { added, skipped };
+}
+
 // ── Export / Import ──────────────────────────────────────────────────────────
 
 /**
@@ -163,6 +359,7 @@ export function exportData() {
     semester: getSemester(),
     settings: getSettings(),
     planner: getPlanner(),
+    studyPlan: getStudyPlan(),
     exportedAt: new Date().toISOString(),
   }, null, 2);
 }
@@ -177,6 +374,7 @@ export function importData(json) {
   if (data.semester) save(KEYS.semester, data.semester);
   if (data.settings) save(KEYS.settings, data.settings);
   if (data.planner) save(KEYS.planner, data.planner);
+  if (data.studyPlan) save(KEYS.studyPlan, data.studyPlan);
 }
 
 // ── Exam planner ─────────────────────────────────────────────────────────────
@@ -307,6 +505,39 @@ const DEMO_COURSES = [
     lastUpdated: '2026-02-20T10:00:00.000Z',
   },
 ];
+
+/**
+ * Deduplicate courses in localStorage by sharedId.
+ * Keeps the entry with the most data (non-empty notes, progress) and removes stale duplicates.
+ * Safe to call on every startup — no-op when there are no duplicates.
+ */
+export function deduplicateSharedCourses() {
+  const courses = getCourses();
+  const bySharedId = new Map();
+  const unshared = [];
+
+  for (const c of courses) {
+    if (!c.sharedId) {
+      unshared.push(c);
+      continue;
+    }
+    const key = String(c.sharedId);
+    if (!bySharedId.has(key)) {
+      bySharedId.set(key, c);
+    } else {
+      // Keep whichever has more data
+      const prev = bySharedId.get(key);
+      const prevScore = (prev.notes ? 1 : 0) + (Array.isArray(prev.progress) ? 1 : 0);
+      const curScore  = (c.notes   ? 1 : 0) + (Array.isArray(c.progress)    ? 1 : 0);
+      if (curScore > prevScore) bySharedId.set(key, c);
+    }
+  }
+
+  const deduped = [...unshared, ...bySharedId.values()];
+  if (deduped.length < courses.length) {
+    save(KEYS.courses, deduped);
+  }
+}
 
 /**
  * Seed demo data if store is empty (first run).

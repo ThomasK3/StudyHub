@@ -100,13 +100,13 @@
 .alert--info {
   background-color: var(--color-blue-light);
   border-left-color: var(--color-blue);
-  color: #0369a1;
+  color: var(--color-info-text);
 }
 
 .alert--warning {
   background-color: var(--color-amber-light);
   border-left-color: var(--color-amber);
-  color: #92400e;
+  color: var(--color-warning-text);
 }
 
 /* ── Tags ─────────────────────────────────────────────────────────────────── */

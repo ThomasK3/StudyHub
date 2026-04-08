@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/planner.css">
+  <link rel="stylesheet" href="css/import.css">
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
 
@@ -45,11 +47,21 @@
       <div class="navbar__nav">
         <a href="#/" class="navbar__link navbar__link--active">Přehled</a>
         <a href="#/calendar" class="navbar__link">Kalendář</a>
+        <a href="#/browse" class="navbar__link">Katalog</a>
         <a href="#/course/new" class="navbar__link">Přidat předmět</a>
         <a href="#/planner" class="navbar__link">Plánovač</a>
+        <a href="#/import" class="navbar__link">Import</a>
+        <button class="navbar__theme-toggle" id="theme-toggle" type="button" title="Přepnout tmavý/světlý režim"></button>
       </div>
     </div>
   </nav>
+
+  <!-- Semester switcher -->
+  <div class="semester-bar" id="semester-bar" style="display:none">
+    <div class="page semester-bar__inner">
+      <div class="semester-bar__tabs" id="semester-tabs"></div>
+    </div>
+  </div>
 
   <!-- Main content -->
   <main id="app" class="page">

@@ -2,7 +2,7 @@
    StudyHub — Calendar view (month grid + list)
    ========================================================================== */
 
-import { getCourses, getSemester, getAllEvents } from '../store.js';
+import { getCourses, getCoursesForSemester, getSemester, getAllEvents, getActiveSemesterLabel } from '../store.js';
 import { navigate } from '../router.js';
 import {
   CZ_MONTHS_NOM, DAY_NAMES, getWeeksInMonth,
@@ -42,8 +42,9 @@ export function renderCalendar(container) {
   if (viewYear == null) initState();
 
   const semester = getSemester();
-  const allEvents = getAllEvents();
-  const courses = getCourses();
+  const allEvents = getAllEvents(); // already filtered by active semester in store
+  const activeSemLabel = getActiveSemesterLabel();
+  const courses = activeSemLabel ? getCoursesForSemester(activeSemLabel) : getCourses();
 
   container.innerHTML = '';
   const wrapper = document.createElement('div');
@@ -79,10 +80,51 @@ export function renderCalendar(container) {
   bindEventClicks(wrapper);
 }
 
+// ── Schedule chip helpers ────────────────────────────────────────────────────
+
+const DAY_ABBR_TO_JS = { 'Ne': 0, 'Po': 1, 'Út': 2, 'St': 3, 'Čt': 4, 'Pá': 5, 'So': 6 };
+
+const CREDIT_COLORS = {
+  3: '#7c9ab5', 4: '#6d8f77', 5: '#9b7d5e', 6: '#00957d', 7: '#6b5ea8',
+};
+
+function getScheduleChipsByDate(courses, semester) {
+  const result = {}; // isoDate → [{label, color, courseId}]
+  const holidaySet = new Set((semester?.holidays || []).map(h => h.date));
+
+  for (const course of courses) {
+    if (!Array.isArray(course.schedule) || !Array.isArray(course.selectedSchedule)) continue;
+    const color = CREDIT_COLORS[course.credits] || '#00957d';
+
+    for (const idx of course.selectedSchedule) {
+      const s = course.schedule[idx];
+      if (!s || !s.day) continue;
+      const jsDay = DAY_ABBR_TO_JS[s.day];
+      if (jsDay == null) continue;
+
+      // Find all matching dates in the viewed month
+      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = new Date(viewYear, viewMonth, d);
+        if (date.getDay() !== jsDay) continue;
+        const iso = toISO(date);
+        if (holidaySet.has(iso)) continue;
+        (result[iso] || (result[iso] = [])).push({
+          label: `${s.time ? s.time.split('-')[0] : ''} ${course.code}`.trim(),
+          color,
+          courseId: course.id,
+        });
+      }
+    }
+  }
+  return result;
+}
+
 // ── Month grid ───────────────────────────────────────────────────────────────
 
 function renderMonthGrid(allEvents, semester) {
   const weeks = getWeeksInMonth(viewYear, viewMonth, semester);
+  const courses = getCourses();
 
   // Build event lookup by ISO date
   const eventsByDate = {};
@@ -90,6 +132,9 @@ function renderMonthGrid(allEvents, semester) {
     if (!ev.date) continue;
     (eventsByDate[ev.date] || (eventsByDate[ev.date] = [])).push(ev);
   }
+
+  // Build schedule chips lookup
+  const schedByDate = getScheduleChipsByDate(courses, semester);
 
   // Header row
   const header = `
@@ -102,11 +147,16 @@ function renderMonthGrid(allEvents, semester) {
   const rows = weeks.map(week => {
     const dayCells = week.days.map(day => {
       const evts = eventsByDate[day.isoDate] || [];
-      const chips = evts.slice(0, 3).map(e => {
+      const schedChips = (schedByDate[day.isoDate] || []).map(sc =>
+        `<div class="cal-chip cal-chip--sched" style="--chip-color:${sc.color}" data-course-id="${sc.courseId}" title="${sc.label}">${sc.label}</div>`
+      ).join('');
+
+      const eventCount = evts.length;
+      const chips = evts.slice(0, 2).map(e => {
         const color = EVENT_TYPE_COLORS[e.type] || EVENT_TYPE_COLORS.other;
         return `<div class="cal-chip" style="--chip-color:${color}" data-course-id="${e.courseId}" title="${e.title} (${e.courseCode})">${e.title}</div>`;
       }).join('');
-      const more = evts.length > 3 ? `<span class="cal-more">+${evts.length - 3}</span>` : '';
+      const more = eventCount > 2 ? `<span class="cal-more">+${eventCount - 2}</span>` : '';
 
       const classes = [
         'cal-grid__cell',
@@ -117,7 +167,7 @@ function renderMonthGrid(allEvents, semester) {
       return `
         <div class="${classes}">
           <span class="cal-grid__num">${day.dayOfMonth}</span>
-          ${chips}${more}
+          ${schedChips}${chips}${more}
         </div>
       `;
     }).join('');

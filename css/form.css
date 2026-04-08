@@ -133,7 +133,7 @@
 
 .weight-sum--warn {
   background-color: var(--color-amber-light);
-  color: #92400e;
+  color: var(--color-warning-text);
 }
 
 /* ── Dynamic rows ─────────────────────────────────────────────────────────── */

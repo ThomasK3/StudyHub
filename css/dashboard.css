@@ -57,6 +57,139 @@
   letter-spacing: 0.04em;
 }
 
+/* ── Countdown row ─────────────────────────────────────────────────────── */
+
+.countdown-row {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 130px;
+}
+
+.countdown-box__value {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-extrabold);
+  font-size: 36px;
+  line-height: 1;
+}
+
+.countdown-box__label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-2);
+}
+
+.countdown-box__sublabel {
+  font-size: var(--text-xs);
+  color: var(--color-teal);
+  margin-top: var(--space-1);
+}
+
+.countdown-box__unit {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+  .countdown-row {
+    flex-direction: column;
+  }
+}
+
+/* ── Today section ─────────────────────────────────────────────────────── */
+
+.today-section {
+  margin-bottom: var(--space-2);
+}
+
+.today-classes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.today-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.today-item__time {
+  font-weight: var(--weight-semibold);
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+.today-item__desc {
+  flex: 1;
+}
+
+.today-item__room {
+  font-size: var(--text-xs);
+  flex-shrink: 0;
+}
+
+.today-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.today-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.today-alert--red {
+  background-color: var(--color-red-light);
+  border: var(--border-width) solid color-mix(in srgb, var(--color-red) 20%, transparent);
+  color: var(--color-red);
+}
+
+.today-alert--amber {
+  background-color: var(--color-amber-light);
+  border: var(--border-width) solid color-mix(in srgb, var(--color-amber) 20%, transparent);
+  color: var(--color-warning-text);
+}
+
+.today-alert__when {
+  font-weight: var(--weight-bold);
+  flex-shrink: 0;
+}
+
+.today-alert__title {
+  flex: 1;
+}
+
+.today-alert__course {
+  font-size: var(--text-xs);
+  flex-shrink: 0;
+}
+
 /* ── Event strip ──────────────────────────────────────────────────────────── */
 
 .event-strip {
@@ -150,9 +283,9 @@
 /* ── Event type badges ────────────────────────────────────────────────────── */
 
 .badge--exam        { background-color: var(--color-red-light);   color: var(--color-red); }
-.badge--test        { background-color: var(--color-amber-light); color: #92400e; }
-.badge--deadline    { background-color: var(--color-blue-light);  color: #0369a1; }
-.badge--presentation { background-color: rgba(124,58,237,0.08);  color: var(--color-purple); }
+.badge--test        { background-color: var(--color-amber-light); color: var(--color-warning-text); }
+.badge--deadline    { background-color: var(--color-blue-light);  color: var(--color-info-text); }
+.badge--presentation { background-color: color-mix(in srgb, var(--color-purple) 8%, transparent); color: var(--color-purple); }
 .badge--other       { background-color: var(--color-off-white);   color: var(--color-muted); }
 .badge--rel         { background-color: var(--color-teal-light);  color: var(--color-teal-dark); }
 .badge--ok          { background-color: var(--color-green-light); color: var(--color-green); }
@@ -236,6 +369,11 @@
   transition: width var(--transition-base);
 }
 
+/* Progress mini display */
+.course-card__progress {
+  margin-top: var(--space-2);
+}
+
 /* Next event in card */
 .course-card__event {
   display: flex;
@@ -245,6 +383,31 @@
   padding-top: var(--space-3);
   border-top: var(--border-width) solid var(--color-border);
   flex-wrap: wrap;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
+
+/* ── Study plan info box ──────────────────────────────────────────────────── */
+
+.plan-info-box {
+  background-color: var(--color-teal-light);
+  border: var(--border-width) solid color-mix(in srgb, var(--color-teal) 20%, transparent);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.plan-info-box__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.plan-info-box__title {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  color: var(--color-teal-dark);
 }
 
 /* ── Empty state ──────────────────────────────────────────────────────────── */

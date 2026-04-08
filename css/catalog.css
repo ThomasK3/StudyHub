@@ -1,0 +1,190 @@
+/* ==========================================================================
+   StudyHub — Catalog browse styles
+   ========================================================================== */
+
+/* ── Filters ─────────────────────────────────────────────────────────────── */
+
+.catalog-filters {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.catalog-filters__search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.catalog-filters__input {
+  padding-left: var(--space-4);
+}
+
+.catalog-filters__select {
+  width: auto;
+  min-width: 160px;
+}
+
+/* ── Card grid ───────────────────────────────────────────────────────────── */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .catalog-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+
+.cat-card {
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.cat-card:hover {
+  border-color: var(--color-teal);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.cat-card__title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cat-card__code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-teal);
+}
+
+.cat-card__name {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-md);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.cat-card__summary {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.cat-card__lecturer {
+  margin: 0;
+}
+
+/* ── Component tags ──────────────────────────────────────────────────────── */
+
+.cat-card__components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.cat-card__comp-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--weight-medium);
+  padding: 1px var(--space-2);
+  background-color: var(--color-off-white);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.cat-card__schedule {
+  margin: 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+
+.cat-card__footer {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.cat-card__add-btn {
+  width: 100%;
+}
+
+.cat-card__added {
+  display: block;
+  text-align: center;
+  padding: var(--space-2);
+}
+
+.btn--sm {
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* ── Skeleton ────────────────────────────────────────────────────────────── */
+
+.cat-card--skeleton {
+  min-height: 160px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-off-white) 25%, var(--color-border) 50%, var(--color-off-white) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton--line {
+  height: 14px;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Toast ────────────────────────────────────────────────────────────────── */
+
+.cat-toast {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--color-teal-deep);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cat-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

@@ -15,6 +15,8 @@ const ROUTES = [
   { pattern: '/course/:id/edit', name: 'course-edit' },
   { pattern: '/course/:id',     name: 'course-detail' },
   { pattern: '/planner',        name: 'planner' },
+  { pattern: '/import',         name: 'import' },
+  { pattern: '/browse',         name: 'browse' },
 ];
 
 /** @type {Function|null} */

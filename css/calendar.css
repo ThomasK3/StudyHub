@@ -157,6 +157,11 @@
   background-color: color-mix(in srgb, var(--chip-color) 20%, transparent);
 }
 
+.cal-chip--sched {
+  font-style: italic;
+  opacity: 0.85;
+}
+
 .cal-more {
   font-size: 10px;
   color: var(--color-muted);

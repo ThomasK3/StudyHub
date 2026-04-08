@@ -1,0 +1,3099 @@
+[
+  {
+    "code": "4ITCZV002",
+    "name": "Actuarial models",
+    "group": "povinny",
+    "credits": 14,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=214004&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Pavel Zimmermann, Ph.D.",
+    "schedule": [],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 364,
+      "lectures": 0,
+      "seminars": 0,
+      "project": 0,
+      "examPrep": 182,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Absolvování závěrečného testu",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [],
+      "recommended": [
+        "Wüthrich, Mario V., and Michael Merz. Statistical foundations of actuarial learning and its applications. Springer Nature, 2023.",
+        "Wuthrich, Mario V., Non-Life Insurance: Mathematics & Statistics. https://dx.doi.org/10.2139/ssrn.2319328"
+      ]
+    },
+    "description": "Předmět je zaměřen na seznámení se základními pojmy, metodami a technikami používanými v aktuárské praxi. Obsah předmětu je vytvořen na základě sylabu Evropské aktuárské asociace (CORE SYLLABUS FOR ACTUARIAL TRAINING IN EUROPE)",
+    "allLecturers": [
+      "Ing. Pavel Zimmermann, Ph.D.(garant)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4ITCZV002",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Actuarial models",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Actuarial models",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Actuarial models",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "14",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "mimosemestr; 0/26",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "angličtina",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Pavel Zimmermann, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumPříprava na závěrečný test182 hPříprava na závěrečnou ústní zkoušku182 hCelkem364 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečný test",
+        "label": "182 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "182 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "364 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAbsolvování závěrečného testu50 %Absolvování závěrečné ústní zkoušky50 %Celkem100 %",
+        "label": "Absolvování závěrečného testu",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečného testu",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Wüthrich, Mario V., and Michael Merz. Statistical foundations of actuarial learning and its applications. Springer Nature, 2023.Wuthrich, Mario V., Non-Life Insurance: Mathematics & Statistics. https://dx.doi.org/10.2139/ssrn.2319328",
+        "label": "Wüthrich, Mario V., and Michael Merz. Statistical foundations of actuarial learning and its applications. Springer Nature, 2023.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaNenalezena žádná vyhovující data.",
+        "label": "Nenalezena žádná vyhovující data.",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Znalost aktuárských modelů: Studenti by měli mít základní a komplexní znalost o aktuárských modelech, jejich definicích, použití a aplikacích v různých oblastech aktuárské praxe.",
+      "Schopnost tvorby a analýzy modelů: Studenti by měli být schopni vytvářet aktuárské modely a provádět jejich analýzu. To zahrnuje schopnost vybrat správné statistické metody, interpretovat výsledky a předpovídat budoucí události.",
+      "Statistická a matematická znalost: Studenti by měli mít pevný základ v oblasti pravděpodobnosti, statistiky a matematiky, který je nezbytný pro pochopení a aplikaci aktuárských modelů.",
+      "Schopnost používat software a nástroje: Studenti by měli být seznámeni s různými aktuárskými softwarovýmni a nástroji používanými v praxi. Měli by být schopni efektivně využívat tyto nástroje pro analýzu dat, tvorbu modelů interpretaci a prezentaci jejich výsledků."
+    ]
+  },
+  {
+    "code": "4ITCZV006",
+    "name": "Actuarial models - Neživotní pojištění",
+    "group": "povinny",
+    "credits": 7,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=222174&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Pavel Zimmermann, Ph.D.",
+    "schedule": [],
+    "semester": "LS 2025/2026",
+    "workload": {
+      "total": 0,
+      "lectures": 0,
+      "seminars": 0,
+      "project": 0,
+      "examPrep": 0,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [],
+    "literature": {
+      "required": [],
+      "recommended": []
+    },
+    "description": "-- obsah této položky nebyl definován --",
+    "allLecturers": [
+      "Ing. Pavel Zimmermann, Ph.D.(garant)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4ITCZV006",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Actuarial models - Neživotní pojištění",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Actuarial models - Non-life insurance",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "7",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "mimosemestr; 0/30",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "angličtina",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "LS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Pavel Zimmermann, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumCelkem0 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "0 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumCelkem0 %",
+        "label": "Celkem",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "0 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaNenalezena žádná vyhovující data.",
+        "label": "Nenalezena žádná vyhovující data.",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "-- obsah této položky nebyl definován --"
+    ]
+  },
+  {
+    "code": "4ITCZV005",
+    "name": "Actuarial models - Životní pojištění",
+    "group": "povinny",
+    "credits": 7,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=222175&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Pavel Zimmermann, Ph.D.",
+    "schedule": [],
+    "semester": "LS 2025/2026",
+    "workload": {
+      "total": 0,
+      "lectures": 0,
+      "seminars": 0,
+      "project": 0,
+      "examPrep": 0,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [],
+    "literature": {
+      "required": [],
+      "recommended": []
+    },
+    "description": "-- obsah této položky nebyl definován --",
+    "allLecturers": [
+      "Ing. Pavel Zimmermann, Ph.D.(garant)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4ITCZV005",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Actuarial models - Životní pojištění",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Actuarial models- Life insurance",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "7",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "mimosemestr; 0/30",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "angličtina",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "LS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Pavel Zimmermann, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumCelkem0 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "0 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumCelkem0 %",
+        "label": "Celkem",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "0 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaNenalezena žádná vyhovující data.",
+        "label": "Nenalezena žádná vyhovující data.",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "-- obsah této položky nebyl definován --"
+    ]
+  },
+  {
+    "code": "4ITCZV003",
+    "name": "Actuarial risk modeling",
+    "group": "povinny",
+    "credits": 3,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=214005&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Pavel Zimmermann, Ph.D.",
+    "schedule": [],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 78,
+      "lectures": 0,
+      "seminars": 0,
+      "project": 0,
+      "examPrep": 39,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Absolvování závěrečného testu",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [],
+      "recommended": [
+        "IOA, Alessandro Carrato MSc FIA, and Gráinne McGuire PhD FIAA. \"A Practitioner’s Introduction to Stochastic Reserving.\" (2016).",
+        "Shapland, Mark R., and Jessica Leong. \"Bootstrap modeling: beyond the basics. Casualty Actuarial Society E-Forum, Fall 2010. 2010.",
+        "Wuthrich, Mario V., Non-Life Insurance: Mathematics & Statistics. https://dx.doi.org/10.2139/ssrn.2319328"
+      ]
+    },
+    "description": "Předmět je zaměřen na poskytnutí znalosti a dovednosti v oblasti modelování pojistně matematických rizik. Studenti se naučí identifikovat, měřit a řídit rizika v pojišťovacím sektoru pomocí různých statistických, matematických a pravděpodobnostních modelů. Důraz je kladen na aplikaci těchto modelů v praxi a na jejich využití při strategickém rozhodování. Obsah předmětu je vytvořen na základě sylabu Evropské aktuárské asociace (CORE SYLLABUS FOR ACTUARIAL TRAINING IN EUROPE)",
+    "allLecturers": [
+      "Ing. Pavel Zimmermann, Ph.D.(garant)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4ITCZV003",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Actuarial risk modeling",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Actuarial risk modeling",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Actuarial risk modeling",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "3",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "mimosemestr; 0/26",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "angličtina",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Pavel Zimmermann, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumPříprava na závěrečný test39 hPříprava na závěrečnou ústní zkoušku39 hCelkem78 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečný test",
+        "label": "39 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "39 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "78 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAbsolvování závěrečného testu50 %Absolvování závěrečné ústní zkoušky50 %Celkem100 %",
+        "label": "Absolvování závěrečného testu",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečného testu",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "IOA, Alessandro Carrato MSc FIA, and Gráinne McGuire PhD FIAA. \"A Practitioner’s Introduction to Stochastic Reserving.\" (2016).Shapland, Mark R., and Jessica Leong. \"Bootstrap modeling: beyond the basics. Casualty Actuarial Society E-Forum, Fall 2010. 2010.Wuthrich, Mario V., Non-Life Insurance: Mathematics & Statistics. https://dx.doi.org/10.2139/ssrn.2319328",
+        "label": "IOA, Alessandro Carrato MSc FIA, and Gráinne McGuire PhD FIAA. \"A Practitioner’s Introduction to Stochastic Reserving.\"",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaNenalezena žádná vyhovující data.",
+        "label": "Nenalezena žádná vyhovující data.",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Po absolvování předmětu by studenti měli dosáhnout následujících výsledků:",
+      "Studenti budou mít základní a pokročilou znalost o aktuárských rizicích, včetně jejich charakteristik, příčin, měření a řízení.",
+      "Studenti budou schopni identifikovat a modelovat různé typy rizik v pojistném sektoru pomocí statistických, matematických a pravděpodobnostních metod.",
+      "Studenti budou schopni hodnotit a měřit riziko.",
+      "Studenti budou schopni aplikovat naučené aktuárské modely na konkrétní situace v pojišťovacím sektoru a interpretovat výsledky pro podporu rozhodování."
+    ]
+  },
+  {
+    "code": "4IT580",
+    "name": "Agilní projekt vývoje webové aplikace",
+    "group": "povinny",
+    "credits": 8,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=207524&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "prof. Ing. Alena Buchalcevová, Ph.D.",
+    "schedule": [],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 208,
+      "lectures": 26,
+      "seminars": 52,
+      "project": 120,
+      "examPrep": 0,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Vypracování semestrální práce",
+        "type": "project",
+        "weight": 80,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Prezentace nebo obhajoba",
+        "type": "other",
+        "weight": 20,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [
+        "MARTIN, Robert C. Agile software development : principles, patterns and practices. Upper Saddle River: Pearson Education, 2003. ISBN 0-13-597444-5.",
+        "ZAKAS, Nicholas C. JavaScript pro webové vývojáře. Brno: Computer Press, 2009. ISBN 978-80-251-2509-0.",
+        "THAU. Velký průvodce JavaScriptem : tvorba interaktivních webových stránek v praxi. Praha: Grada, 2009. ISBN 978-80-247-2211-5.",
+        "AMBLER, Scott W.; LINES, Mark. Disciplined agile delivery : a practitioner's guide to agile software delivery in the enterprise. Upper Saddle River: IBM Press, 2012. ISBN 978-0-13-281013-5."
+      ],
+      "recommended": []
+    },
+    "description": "Cílem předmětu je umožnit studentům prakticky si vyzkoušet realizaci projektu vývoje moderní webové aplikace v agilně řízeném týmu. Předmět umožní studentům řešit reálné problémy, se kterými se při vývoji webové aplikace agilním způsobem setkají. Pro vývoj se využívají technologie ReactJS, Redux a NodeJS, pomocí kterých průběžně týmový projekt realizuje. \n\nVstupní předpoklady předmětu: student má základy HTML, CSS, SQL a objektově orientovaného programování, základní znalosti Javascriptu a agilního vývoje. \n\nJe doporučeno předchozí absolvování předmětů 4IT573 Základy Node.js, 4ME486 Design uživatelských rozhraní, 4IZ571 Vývoj pokročilých webových aplikací v PHP.\n\nPředmět pokrývá následující tematické okruhy oblasti vzdělávání Informatika: Programování, Softwarové inženýrství, Uživatelská rozhraní.",
+    "allLecturers": [
+      "prof. Ing. Alena Buchalcevová, Ph.D.(garant)",
+      "Ing. Jan Černý(cvičící, zkoušející)",
+      "Marek Honzal(tutor)",
+      "Ing. Martin Kapal(cvičící, zkoušející)",
+      "Tomáš Klíma(tutor)",
+      "Tomáš Kříž(tutor)",
+      "Ing. Veronika Kuchynková(tutor)",
+      "Matyas Mihalka(tutor)",
+      "Marcel Puškarik(tutor)",
+      "Petr Vnenk(tutor)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4IT580",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Agilní projekt vývoje webové aplikace",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Agilní projekt vývoje webové aplikace",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Agile Web Application Development Project",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "8",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "prezenční; 0/4",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "čeština",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "magisterský navazující",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "prof. Ing. Alena Buchalcevová, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na cvičeních/seminářích/tutoriálech52 hPříprava na přednášky a cvičení samostudiem26 hPříprava semestrální práce120 hPříprava prezentace nebo obhajoby10 hCelkem208 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "52 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava semestrální práce",
+        "label": "120 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava prezentace nebo obhajoby",
+        "label": "10 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "208 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumVypracování semestrální práce80 %Prezentace nebo obhajoba20 %Celkem100 %",
+        "label": "Vypracování semestrální práce",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vypracování semestrální práce",
+        "label": "80 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Prezentace nebo obhajoba",
+        "label": "20 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Základní:MARTIN, Robert C. Agile software development : principles, patterns and practices. Upper Saddle River: Pearson Education, 2003. ISBN 0-13-597444-5. ZAKAS, Nicholas C. JavaScript pro webové vývojáře. Brno: Computer Press, 2009. ISBN 978-80-251-2509-0. THAU. Velký průvodce JavaScriptem : tvorba interaktivních webových stránek v praxi. Praha: Grada, 2009. ISBN 978-80-247-2211-5. AMBLER, Scott W.; LINES, Mark. Disciplined agile delivery : a practitioner's guide to agile software delivery in the enterprise. Upper Saddle River: IBM Press, 2012. ISBN 978-0-13-281013-5.",
+        "label": "Základní:",
+        "minPercent": 0
+      },
+      {
+        "grade": "MARTIN, Robert C. Agile software development : principles, patterns and practices. Upper Saddle River: Pearson Education, 2003. ISBN 0-13-597444-5. ZAKAS, Nicholas C. JavaScript pro webové vývojáře. Brno: Computer Press, 2009. ISBN 978-80-251-2509-0. THAU. Velký průvodce JavaScriptem : tvorba interaktivních webových stránek v praxi. Praha: Grada, 2009. ISBN 978-80-247-2211-5. AMBLER, Scott W.; LINES, Mark. Disciplined agile delivery : a practitioner's guide to agile software delivery in the enterprise. Upper Saddle River: IBM Press, 2012. ISBN 978-0-13-281013-5.",
+        "label": "MARTIN, Robert C. Agile software development : principles, patterns and practices. Upper Saddle River: Pearson Education, 2003. ISBN 0-13-597444-5.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaPondělí\nÚterý\n16:15-17:45\n16:15-17:45\nSB 236\nSB 207\nCvičení\nCvičení\nKaždý týden\nKaždý týden\nIng. Jan Černý33-",
+        "label": "Pondělí\nÚterý",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí\nÚterý",
+        "label": "16:15-17:45\n16:15-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "FakultaKód programu/oboru/specializaceFormaSkupinaObdobíFISN-AI-ITprezenčníhVLS 2018/2019\nZS 2019/2020N-ZWprezenčníhVZS 2020/2021\nZS 2021/2022\nZS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/2026VYprezenčníePZS 2020/2021\nZS 2021/2022\nZS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/2026Skupiny předmětů (otevře/zavře se po kliknutí)Kódy skupin předmětů se skládají z prvního písmene (malé písmeno) označujícího šíři programů, které skupinu využívají, a přípony (velká písmena a čísla) označující charakter skupiny v rámci daného programu. Kódy prvních písmenf* (fP, fJ1 etc.)fakultně specifické skupinyc* (cP, cVOL etc.)celoškolně používané skupinyo* (oP, oV etc.)oborově specifické skupiny (bakalářské programy)h* (hP, hV etc.)oborově specifické skupiny (magisterské programy)s* (sP, sV etc.)skupiny vedlejších specializací Kódy přípon*P (oP, hP etc.)povinné předměty*V[*] (oV, hV1, cVB etc.)volitelné předměty*J[*] (fJ1, oJ2, oJV etc.)jazykově (povinně volitelné) předměty*SZ[*] (fSZ, hSZ etc.)státní zkoušky*EXC (oEXC, hEXC etc.)zakázaný předmět*VOR (cVOR, fVOR etc.)předměty nad rámec studijního plánu*ZEXCN* (cZEXCNB etc.)předměty pro výměnné programy*TVS[*] (cTVS1 etc.)tělesná výchova a sport",
+        "label": "FIS",
+        "minPercent": 0
+      },
+      {
+        "grade": "FIS",
+        "label": "N-AI-IT",
+        "minPercent": 0
+      },
+      {
+        "grade": "N-ZW",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "VY",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "f* (fP, fJ1 etc.)",
+        "label": "fakultně specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "c* (cP, cVOL etc.)",
+        "label": "celoškolně používané skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "o* (oP, oV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "h* (hP, hV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "s* (sP, sV etc.)",
+        "label": "skupiny vedlejších specializací",
+        "minPercent": 0
+      },
+      {
+        "grade": "*P (oP, hP etc.)",
+        "label": "povinné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*V[*] (oV, hV1, cVB etc.)",
+        "label": "volitelné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*J[*] (fJ1, oJ2, oJV etc.)",
+        "label": "jazykově",
+        "minPercent": 0
+      },
+      {
+        "grade": "*SZ[*] (fSZ, hSZ etc.)",
+        "label": "státní zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "*EXC (oEXC, hEXC etc.)",
+        "label": "zakázaný předmět",
+        "minPercent": 0
+      },
+      {
+        "grade": "*VOR (cVOR, fVOR etc.)",
+        "label": "předměty nad rámec studijního plánu",
+        "minPercent": 0
+      },
+      {
+        "grade": "*ZEXCN* (cZEXCNB etc.)",
+        "label": "předměty pro výměnné programy",
+        "minPercent": 0
+      },
+      {
+        "grade": "*TVS[*] (cTVS1 etc.)",
+        "label": "tělesná výchova a sport",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Po úspěšném absolvování předmětu budou studenti schopni navrhovat vlastní webové projekty a budou vědět o všech aspektech, které je třeba zohlednit, aby jejich projekt mohl být úspěšný."
+    ]
+  },
+  {
+    "code": "4ITCZV004",
+    "name": "AI pro lídry",
+    "group": "povinny",
+    "credits": 10,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=212288&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "doc. Ing. Ota Novotný, Ph.D.",
+    "schedule": [],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 260,
+      "lectures": 47,
+      "seminars": 100,
+      "project": 53,
+      "examPrep": 27,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Prezentace nebo obhajoba",
+        "type": "other",
+        "weight": 45,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 10,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Týmový AI projekt",
+        "type": "project",
+        "weight": 45,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [],
+      "recommended": [
+        "Deloitte AI Institute (2025): State of Generative AI in the Enterprise: 2024 Year-End Report. https://www2.deloitte.com/content/dam/Deloitte/us/Documents/consulting/us-state-of-gen-ai-q4.pdf",
+        "IBM Institute for Business Value (2024): AI in action 2024. https://www.ibm.com/think/reports/ai-in-action",
+        "Maslej, N. et al. (2024): Artificial Intelligence Index Report 2024. https://doi.org/10.48550/arXiv.2405.19522",
+        "Singla, A. et al. (2024): The State of AI in Early 2024: Gen AI Adoption Spikes and Starts to Generate Value. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024"
+      ]
+    },
+    "description": "Kurz poskytuje lídrům (produktovým a projektovým manažerům, konzultantům, business-analytikům, HR, marketingovým a dalším manažerům) komplexní přehled o umělé inteligenci (AI) coby transformační technologii, kterou mohou využít k inovaci produktů, optimalizaci interních procesů a vytváření nové hodnoty pro zákazníky. Zahrnuje strategické, technické a etické aspekty AI a připravuje účastníky na vedení AI iniciativ ve firmách.",
+    "allLecturers": [
+      "Ing. David Chudán, Ph.D.(cvičící)",
+      "prof. Ing. Miroslav Karlíček, Ph.D.(cvičící)",
+      "Ing. Vítězslav Klement, MBA(cvičící)",
+      "Ing. Richard Antonín Novák, Ph.D.(cvičící)",
+      "doc. Ing. Ota Novotný, Ph.D.(cvičící, garant)",
+      "Ing. PhDr. Antonín Pavlíček, Ph.D.(cvičící)",
+      "Mgr. Ing. Tomáš Sigmund, Ph.D.(cvičící)",
+      "Ing. Jakub Stránský(cvičící)",
+      "Ing. Miroslav Umlauf, MBA(cvičící)",
+      "Ing. Filip Vencovský, Ph.D.(cvičící)",
+      "Ing. Pavel Zimmermann, Ph.D.(cvičící)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4ITCZV004",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "AI pro lídry",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "AI pro lídry",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "AI for Leaders",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "10",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "mimosemestr; 0/26",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "čeština",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "-- obsah této položky nebyl definován --",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. David Chudán, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na cvičeních/seminářích/tutoriálech100 hPříprava na přednášky a cvičení samostudiem47 hPříprava prezentace nebo obhajoby33 hPříprava na závěrečnou ústní zkoušku27 hTýmová práce na AI projektu53 hCelkem260 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "100 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "47 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava prezentace nebo obhajoby",
+        "label": "33 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "27 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Týmová práce na AI projektu",
+        "label": "53 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "260 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumPrezentace nebo obhajoba45 %Absolvování závěrečné ústní zkoušky10 %Týmový AI projekt45 %Celkem100 %",
+        "label": "Prezentace nebo obhajoba",
+        "minPercent": 0
+      },
+      {
+        "grade": "Prezentace nebo obhajoba",
+        "label": "45 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "10 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Týmový AI projekt",
+        "label": "45 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Deloitte AI Institute (2025): State of Generative AI in the Enterprise: 2024 Year-End Report. https://www2.deloitte.com/content/dam/Deloitte/us/Documents/consulting/us-state-of-gen-ai-q4.pdfIBM Institute for Business Value (2024): AI in action 2024. https://www.ibm.com/think/reports/ai-in-actionMaslej, N. et al. (2024): Artificial Intelligence Index Report 2024. https://doi.org/10.48550/arXiv.2405.19522Singla, A. et al. (2024): The State of AI in Early 2024: Gen AI Adoption Spikes and Starts to Generate Value. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024",
+        "label": "Deloitte AI Institute",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaNenalezena žádná vyhovující data.",
+        "label": "Nenalezena žádná vyhovující data.",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "1. Vysvětlit klíčové koncepty a algoritmy AI (ML, DL, NLP, CV) a jejich využití v praxi.",
+      "2. Identifikovat příležitosti pro AI ve vlastní organizaci a definovat strategické cíle a metriky úspěchu AI projektů.",
+      "3. Vytvořit a spravovat roadmapu AI projektu v souladu s metodikou Agile a principy change-managementu.",
+      "4. Vybrat vhodné nástroje a platformy pro implementaci AI a řídit spolupráci s datovými vědci a vývojáři.",
+      "5. Posoudit etické, právní a bezpečnostní aspekty AI, včetně GDPR a EU AI Act.",
+      "6. Vyhodnotit návratnost investic, KPI a obchodní dopad AI projektů.",
+      "7. Prezentovat AI řešení relevantním stakeholderům a obhájit jejich přínosy."
+    ]
+  },
+  {
+    "code": "4IT216",
+    "name": "Analýza a návrh informačních systémů",
+    "group": "povinny",
+    "credits": 6,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=207354&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Tomáš Bruckner, Ph.D.",
+    "schedule": [
+      {
+        "day": "Po",
+        "time": "12:45-14:15",
+        "room": "RB 212",
+        "type": "lecture",
+        "teacher": "Ing. Tomáš Bruckner, Ph.D.",
+        "capacity": 127,
+        "frequency": "každý"
+      },
+      {
+        "day": "Po",
+        "time": "14:30-16:00",
+        "room": "SB 207",
+        "type": "seminar",
+        "teacher": "Ing. Tomáš Bruckner, Ph.D.",
+        "capacity": 26,
+        "frequency": "každý"
+      },
+      {
+        "day": "Po",
+        "time": "16:15-17:45",
+        "room": "SB 207",
+        "type": "seminar",
+        "teacher": "Ing. Tomáš Bruckner, Ph.D.",
+        "capacity": 26,
+        "frequency": "každý"
+      },
+      {
+        "day": "Út",
+        "time": "09:15-10:45",
+        "room": "SB 109",
+        "type": "seminar",
+        "teacher": "Ing. Veronika Jedličková",
+        "capacity": 25,
+        "frequency": "každý"
+      },
+      {
+        "day": "St",
+        "time": "12:45-14:15",
+        "room": "SB 109",
+        "type": "seminar",
+        "teacher": "Ing. Kryštof Komanec",
+        "capacity": 25,
+        "frequency": "každý"
+      },
+      {
+        "day": "St",
+        "time": "14:30-16:00",
+        "room": "SB 109",
+        "type": "seminar",
+        "teacher": "Ing. Tereza Hajná",
+        "capacity": 25,
+        "frequency": "každý"
+      }
+    ],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 156,
+      "lectures": 26,
+      "seminars": 26,
+      "project": 39,
+      "examPrep": 26,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Aktivita na přednáškách/cvičeních/seminářích",
+        "type": "attendance",
+        "weight": 10,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Vypracování semestrální práce",
+        "type": "project",
+        "weight": 36,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Prezentace nebo obhajoba",
+        "type": "other",
+        "weight": 4,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [
+        "BRUCKNER, Tomáš; BUCHALCEVOVÁ, Alena; CHLAPEK, Dušan; STANOVSKÁ, Iva; VOŘÍŠEK, Jiří; ŘEPA, Václav. Tvorba informačních systémů : principy, metodiky, architektury. Praha: Grada Publishing, 2012. ISBN 978-80-247-4153-6.",
+        "CHLAPEK, Dušan; STANOVSKÁ, Iva a ŘEPA, Václav. Analýza a návrh informačních systémů. Praha: Oeconomica, 2011. ISBN 978-80-245-1782-7.",
+        "VOŘÍŠEK, Jiří. Principy a modely řízení podnikové informatiky. Praha: Oeconomica, 2008. ISBN 978-80-245-1440-6.",
+        "VOŘÍŠEK, Jiří. Strategické řízení informačního systému a systémová integrace. Praha: Management Press, 1997. ISBN 80-85943-40-9."
+      ],
+      "recommended": [
+        "GÁLA, Libor; POUR, Jan a ŠEDIVÁ, Zuzana. Podniková informatika. 2. vyd. Praha: Grada, 2009. 496 s. ISBN 978-80-247-2615-1.",
+        "BUCHALCEVOVÁ, Alena. Metodiky budování informačních systémů. Praha: Oeconomica, 2009. ISBN 978-80-245-1540-3.",
+        "ARLOW, Jim; NEUSTADT, Ila. UML 2 a unifikovaný proces vývoje aplikací : objektově orientovaná analýza a návrh prakticky. Brno: Computer Press, 2007. ISBN 978-80-251-1503-9."
+      ]
+    },
+    "description": "Cílem předmětu je seznámit studenty se základními principy vývoje, provozu a řízení informačního systému podniku založeného na moderních informačních technologiích. Ve cvičeních studenti získají zkušenosti s modelováním podnikových procesů, s definicí informatické podpory těchto procesů a s týmovým řešením vybraných činností analýzy a návrhu informatického projektu. Předmět se týká zejména tematického okruhu Informační systémy, dále zasahuje do Softwarového inženýrství, Modelování, Architektury.",
+    "allLecturers": [
+      "Ing. Tomáš Bruckner, Ph.D.(cvičící, garant, přednášející, zkoušející)",
+      "Ing. Tereza Hajná(cvičící, zkoušející)",
+      "Ing. Veronika Jedličková(cvičící, zkoušející)",
+      "Ing. Kryštof Komanec(cvičící, zkoušející)",
+      "Ing. Iva Stanovská(cvičící, přednášející, zkoušející)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4IT216",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Analýza a návrh informačních systémů",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Analýza a návrh informačních systémů",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Information Systems Analysis and Design",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "6",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "prezenční; 2/2",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "čeština",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "bakalářský",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Tomáš Bruckner, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na přednáškách26 hÚčast na cvičeních/seminářích/tutoriálech26 hPříprava na přednášky a cvičení samostudiem26 hPříprava semestrální práce39 hPříprava prezentace nebo obhajoby13 hPříprava na závěrečnou ústní zkoušku26 hCelkem156 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na přednáškách",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava semestrální práce",
+        "label": "39 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava prezentace nebo obhajoby",
+        "label": "13 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "156 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAktivita na přednáškách/cvičeních/seminářích10 %Vypracování semestrální práce36 %Prezentace nebo obhajoba4 %Absolvování závěrečné ústní zkoušky50 %Celkem100 %",
+        "label": "Aktivita na přednáškách/cvičeních/seminářích",
+        "minPercent": 0
+      },
+      {
+        "grade": "Aktivita na přednáškách/cvičeních/seminářích",
+        "label": "10 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vypracování semestrální práce",
+        "label": "36 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Prezentace nebo obhajoba",
+        "label": "4 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Základní:BRUCKNER, Tomáš; BUCHALCEVOVÁ, Alena; CHLAPEK, Dušan; STANOVSKÁ, Iva; VOŘÍŠEK, Jiří; ŘEPA, Václav. Tvorba informačních systémů : principy, metodiky, architektury. Praha: Grada Publishing, 2012. ISBN 978-80-247-4153-6. CHLAPEK, Dušan; STANOVSKÁ, Iva a ŘEPA, Václav. Analýza a návrh informačních systémů. Praha: Oeconomica, 2011. ISBN 978-80-245-1782-7. VOŘÍŠEK, Jiří. Principy a modely řízení podnikové informatiky. Praha: Oeconomica, 2008. ISBN 978-80-245-1440-6. VOŘÍŠEK, Jiří. Strategické řízení informačního systému a systémová integrace. Praha: Management Press, 1997. ISBN 80-85943-40-9. Doporučená:GÁLA, Libor; POUR, Jan a ŠEDIVÁ, Zuzana. Podniková informatika. 2. vyd. Praha: Grada, 2009. 496 s. ISBN 978-80-247-2615-1. BUCHALCEVOVÁ, Alena. Metodiky budování informačních systémů. Praha: Oeconomica, 2009. ISBN 978-80-245-1540-3. ARLOW, Jim; NEUSTADT, Ila. UML 2 a unifikovaný proces vývoje aplikací : objektově orientovaná analýza a návrh prakticky. Brno: Computer Press, 2007. ISBN 978-80-251-1503-9.",
+        "label": "Základní:",
+        "minPercent": 0
+      },
+      {
+        "grade": "BRUCKNER, Tomáš; BUCHALCEVOVÁ, Alena; CHLAPEK, Dušan; STANOVSKÁ, Iva; VOŘÍŠEK, Jiří; ŘEPA, Václav. Tvorba informačních systémů : principy, metodiky, architektury. Praha: Grada Publishing, 2012. ISBN 978-80-247-4153-6. CHLAPEK, Dušan; STANOVSKÁ, Iva a ŘEPA, Václav. Analýza a návrh informačních systémů. Praha: Oeconomica, 2011. ISBN 978-80-245-1782-7. VOŘÍŠEK, Jiří. Principy a modely řízení podnikové informatiky. Praha: Oeconomica, 2008. ISBN 978-80-245-1440-6. VOŘÍŠEK, Jiří. Strategické řízení informačního systému a systémová integrace. Praha: Management Press, 1997. ISBN 80-85943-40-9.",
+        "label": "BRUCKNER, Tomáš; BUCHALCEVOVÁ, Alena; CHLAPEK, Dušan; STANOVSKÁ, Iva; VOŘÍŠEK, Jiří; ŘEPA, Václav. Tvorba informačních systémů : principy, metodiky, architektury. Praha: Grada Publishing, 2012. ISBN 978-80-247-4153-6.",
+        "minPercent": 0
+      },
+      {
+        "grade": "GÁLA, Libor; POUR, Jan a ŠEDIVÁ, Zuzana. Podniková informatika. 2. vyd. Praha: Grada, 2009. 496 s. ISBN 978-80-247-2615-1. BUCHALCEVOVÁ, Alena. Metodiky budování informačních systémů. Praha: Oeconomica, 2009. ISBN 978-80-245-1540-3. ARLOW, Jim; NEUSTADT, Ila. UML 2 a unifikovaný proces vývoje aplikací : objektově orientovaná analýza a návrh prakticky. Brno: Computer Press, 2007. ISBN 978-80-251-1503-9.",
+        "label": "GÁLA, Libor; POUR, Jan a ŠEDIVÁ, Zuzana. Podniková informatika. 2. vyd. Praha: Grada, 2009. 496 s. ISBN 978-80-247-2615-1.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaPondělí\n12:45-14:15\nRB 212\nPřednáška\nKaždý týden\nIng. Tomáš Bruckner, Ph.D.127-Pondělí\n14:30-16:00\nSB 207\nCvičení\nKaždý týden\nIng. Tomáš Bruckner, Ph.D.26-Pondělí\n16:15-17:45\nSB 207\nCvičení\nKaždý týden\nIng. Tomáš Bruckner, Ph.D.26-Úterý\n09:15-10:45\nSB 109\nCvičení\nKaždý týden\nIng. Veronika Jedličková25-Středa\n12:45-14:15\nSB 109\nCvičení\nKaždý týden\nIng. Kryštof Komanec25-Středa\n14:30-16:00\nSB 109\nCvičení\nKaždý týden\nIng. Tereza Hajná25-",
+        "label": "Pondělí",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí",
+        "label": "12:45-14:15",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí",
+        "label": "14:30-16:00",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí",
+        "label": "16:15-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "Úterý",
+        "label": "09:15-10:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "Středa",
+        "label": "12:45-14:15",
+        "minPercent": 0
+      },
+      {
+        "grade": "Středa",
+        "label": "14:30-16:00",
+        "minPercent": 0
+      },
+      {
+        "grade": "FakultaKód programu/oboru/specializaceFormaSkupinaObdobíFFUB-FU-UCprezenčníoV2ZS 2017/2018\nZS 2018/2019B-UCprezenčníoV2ZS 2019/2020\nLS 2019/2020\nZS 2020/2021\nLS 2020/2021\nZS 2021/2022\nZS 2022/2023\nLS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/2026\nZS 2026/2027FISB-AI-AIprezenčníoPZS 2014/2015\nZS 2015/2016\nLS 2015/2016\nZS 2016/2017\nLS 2016/2017\nZS 2017/2018\nLS 2017/2018\nZS 2018/2019\nLS 2018/2019\nZS 2019/2020B-AIN1prezenčníoPZS 2020/2021\nZS 2021/2022\nZS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/2026N-AI-ITprezenčníhEXCLS 2014/2015\nZS 2015/2016\nLS 2016/2017\nZS 2017/2018\nLS 2017/2018\nZS 2018/2019\nLS 2018/2019\nZS 2019/20204IPprezenčnísPLS 2015/2016\nZS 2016/2017\nZS 2017/2018\nZS 2018/2019\nZS 2019/2020\nZS 2020/2021\nZS 2021/2022\nLS 2021/2022\nZS 2022/2023\nLS 2022/2023\nZS 2023/20244KSprezenčnísVZS 2016/2017\nZS 2017/2018\nZS 2018/2019\nZS 2019/2020\nZS 2020/2021\nZS 2021/2022Skupiny předmětů (otevře/zavře se po kliknutí)Kódy skupin předmětů se skládají z prvního písmene (malé písmeno) označujícího šíři programů, které skupinu využívají, a přípony (velká písmena a čísla) označující charakter skupiny v rámci daného programu. Kódy prvních písmenf* (fP, fJ1 etc.)fakultně specifické skupinyc* (cP, cVOL etc.)celoškolně používané skupinyo* (oP, oV etc.)oborově specifické skupiny (bakalářské programy)h* (hP, hV etc.)oborově specifické skupiny (magisterské programy)s* (sP, sV etc.)skupiny vedlejších specializací Kódy přípon*P (oP, hP etc.)povinné předměty*V[*] (oV, hV1, cVB etc.)volitelné předměty*J[*] (fJ1, oJ2, oJV etc.)jazykově (povinně volitelné) předměty*SZ[*] (fSZ, hSZ etc.)státní zkoušky*EXC (oEXC, hEXC etc.)zakázaný předmět*VOR (cVOR, fVOR etc.)předměty nad rámec studijního plánu*ZEXCN* (cZEXCNB etc.)předměty pro výměnné programy*TVS[*] (cTVS1 etc.)tělesná výchova a sport",
+        "label": "FFU",
+        "minPercent": 0
+      },
+      {
+        "grade": "FFU",
+        "label": "B-FU-UC",
+        "minPercent": 0
+      },
+      {
+        "grade": "B-UC",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "FIS",
+        "label": "B-AI-AI",
+        "minPercent": 0
+      },
+      {
+        "grade": "B-AIN1",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "N-AI-IT",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "4IP",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "4KS",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "f* (fP, fJ1 etc.)",
+        "label": "fakultně specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "c* (cP, cVOL etc.)",
+        "label": "celoškolně používané skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "o* (oP, oV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "h* (hP, hV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "s* (sP, sV etc.)",
+        "label": "skupiny vedlejších specializací",
+        "minPercent": 0
+      },
+      {
+        "grade": "*P (oP, hP etc.)",
+        "label": "povinné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*V[*] (oV, hV1, cVB etc.)",
+        "label": "volitelné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*J[*] (fJ1, oJ2, oJV etc.)",
+        "label": "jazykově",
+        "minPercent": 0
+      },
+      {
+        "grade": "*SZ[*] (fSZ, hSZ etc.)",
+        "label": "státní zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "*EXC (oEXC, hEXC etc.)",
+        "label": "zakázaný předmět",
+        "minPercent": 0
+      },
+      {
+        "grade": "*VOR (cVOR, fVOR etc.)",
+        "label": "předměty nad rámec studijního plánu",
+        "minPercent": 0
+      },
+      {
+        "grade": "*ZEXCN* (cZEXCNB etc.)",
+        "label": "předměty pro výměnné programy",
+        "minPercent": 0
+      },
+      {
+        "grade": "*TVS[*] (cTVS1 etc.)",
+        "label": "tělesná výchova a sport",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Po úspěšném absolvování budou studenti schopni:",
+      "- uvažovat o vývoji informačního systému firmy a řízení informatiky v kontextu potřeb řízení firmy,",
+      "- rozlišit informační systém, individálně vyvíjený aplikační software, typový aplikační software informační technologie a jejich místo v řízení firmy,",
+      "- dekomponovat projekt IS/ICT do etap, navrhnout kroky a výstupy etap dle dimenzí pohledu na IS/ICT,",
+      "- specifikovat funkční a nefunkční požadavky na IS/ICT,",
+      "- zhruba definovat celkovou architekturu infomačního systému,",
+      "- na konceptuální úrovni navrhnout procesní model firmy, funkční model IS a doménový model tříd,",
+      "- modelovat v notacích EPC a BPMN (procesy), UML (business třídy a případy užití), DFD (kontext IS)."
+    ]
+  },
+  {
+    "code": "4IT474",
+    "name": "Analýza a návrh testů softwaru",
+    "group": "povinny",
+    "credits": 6,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=207433&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. et Ing. Michal Doležel, Ph.D.",
+    "schedule": [
+      {
+        "day": "Po",
+        "time": "16:15-17:45",
+        "room": "SB 228",
+        "type": "lecture",
+        "teacher": "Mgr. Zdeněk Grössl",
+        "capacity": 30,
+        "frequency": "každý"
+      },
+      {
+        "day": "Po",
+        "time": "18:00-19:30",
+        "room": "SB 228",
+        "type": "seminar",
+        "teacher": "Mgr. Zdeněk Grössl",
+        "capacity": 30,
+        "frequency": "každý"
+      }
+    ],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 156,
+      "lectures": 39,
+      "seminars": 26,
+      "project": 39,
+      "examPrep": 26,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Aktivita na přednáškách/cvičeních/seminářích",
+        "type": "attendance",
+        "weight": 20,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Vypracování semestrální práce",
+        "type": "project",
+        "weight": 40,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 40,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [
+        "HAVLÍČKOVÁ, Anna; ROUDENSKÝ, Petr. Řízení kvality softwaru : průvodce testováním. Brno: Computer Press, 2013. ISBN 978-80-251-3816-8.",
+        "BATH, Graham; MCKAY, Judy. The software test engineer's handbook : a study guide for the ISTQB test analyst and technical test analyst advanced level certificates 2012. Santa Barbara: Rocky Nook, 2014. ISBN 978-1-937538-44-6.",
+        "FALK, Jack; KANER, Cem; NGUYEN, Hung Quoc. Testing computer software. New York: John Wiley & Sons, 1999. ISBN 0-471-35846-0."
+      ],
+      "recommended": [
+        "BACH, James; KANER, Cem; PETTICHORD, Bret. Lessons learned in software testing : a context-driven approach. New York: John Wiley, 2002. ISBN 0-471-08112-4."
+      ]
+    },
+    "description": "Cílem předmětu je seznámit studenty s technikami pro analýzu a návrh testů softwaru a vyzkoušet si jejich aplikaci v praxi. Předmět pokrývá tematický okruh Softwarové inženýrství oblasti vzdělávání Informatika.",
+    "allLecturers": [
+      "Ing. et Ing. Michal Doležel, Ph.D.(garant)",
+      "Mgr. Zdeněk Grössl(cvičící, přednášející, zkoušející)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4IT474",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Analýza a návrh testů softwaru",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Analýza a návrh testů softwaru",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Test Analysis and design",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "6",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "prezenční; 2/2",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "čeština",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "magisterský navazující",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. et Ing. Michal Doležel, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na přednáškách26 hÚčast na cvičeních/seminářích/tutoriálech26 hPříprava na přednášky a cvičení samostudiem39 hPříprava semestrální práce39 hPříprava na závěrečnou ústní zkoušku26 hCelkem156 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na přednáškách",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "39 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava semestrální práce",
+        "label": "39 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "156 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAktivita na přednáškách/cvičeních/seminářích20 %Vypracování semestrální práce40 %Absolvování závěrečné ústní zkoušky40 %Celkem100 %",
+        "label": "Aktivita na přednáškách/cvičeních/seminářích",
+        "minPercent": 0
+      },
+      {
+        "grade": "Aktivita na přednáškách/cvičeních/seminářích",
+        "label": "20 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vypracování semestrální práce",
+        "label": "40 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "40 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Základní:HAVLÍČKOVÁ, Anna; ROUDENSKÝ, Petr. Řízení kvality softwaru : průvodce testováním. Brno: Computer Press, 2013. ISBN 978-80-251-3816-8. BATH, Graham; MCKAY, Judy. The software test engineer's handbook : a study guide for the ISTQB test analyst and technical test analyst advanced level certificates 2012. Santa Barbara: Rocky Nook, 2014. ISBN 978-1-937538-44-6. FALK, Jack; KANER, Cem; NGUYEN, Hung Quoc. Testing computer software. New York: John Wiley & Sons, 1999. ISBN 0-471-35846-0. Doporučená:BACH, James; KANER, Cem; PETTICHORD, Bret. Lessons learned in software testing : a context-driven approach. New York: John Wiley, 2002. ISBN 0-471-08112-4.",
+        "label": "Základní:",
+        "minPercent": 0
+      },
+      {
+        "grade": "HAVLÍČKOVÁ, Anna; ROUDENSKÝ, Petr. Řízení kvality softwaru : průvodce testováním. Brno: Computer Press, 2013. ISBN 978-80-251-3816-8. BATH, Graham; MCKAY, Judy. The software test engineer's handbook : a study guide for the ISTQB test analyst and technical test analyst advanced level certificates 2012. Santa Barbara: Rocky Nook, 2014. ISBN 978-1-937538-44-6. FALK, Jack; KANER, Cem; NGUYEN, Hung Quoc. Testing computer software. New York: John Wiley & Sons, 1999. ISBN 0-471-35846-0.",
+        "label": "HAVLÍČKOVÁ, Anna; ROUDENSKÝ, Petr. Řízení kvality softwaru : průvodce testováním. Brno: Computer Press, 2013. ISBN 978-80-251-3816-8.",
+        "minPercent": 0
+      },
+      {
+        "grade": "BACH, James; KANER, Cem; PETTICHORD, Bret. Lessons learned in software testing : a context-driven approach. New York: John Wiley, 2002. ISBN 0-471-08112-4.",
+        "label": "BACH, James; KANER, Cem; PETTICHORD, Bret. Lessons learned in software testing : a context-driven approach. New York: John Wiley, 2002. ISBN 0-471-08112-4.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámkaPondělí\n16:15-17:45\nSB 228\nPřednáška\nKaždý týden\nMgr. Zdeněk Grössl30-Pondělí\n18:00-19:30\nSB 228\nCvičení\nKaždý týden\nMgr. Zdeněk Grössl30-",
+        "label": "Pondělí",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí",
+        "label": "16:15-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "Pondělí",
+        "label": "18:00-19:30",
+        "minPercent": 0
+      },
+      {
+        "grade": "FakultaKód programu/oboru/specializaceFormaSkupinaObdobíFISN-AI-ITprezenčníhVZS 2013/2014\nZS 2014/2015\nLS 2014/2015\nZS 2015/2016\nLS 2016/2017\nZS 2017/2018\nLS 2017/2018\nZS 2018/2019\nLS 2018/2019\nZS 2019/2020RIprezenčníeVZS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/2026VYprezenčníeVZS 2020/2021\nZS 2021/2022\nZS 2022/2023\nZS 2023/2024\nZS 2024/2025\nZS 2025/20264KSprezenčnísPZS 2016/2017\nZS 2017/2018\nZS 2018/2019\nZS 2019/2020\nZS 2020/2021\nZS 2021/2022distančnísPZS 2017/20184SMprezenčnísVLS 2018/2019\nZS 2019/2020\nZS 2020/2021\nZS 2021/2022\nLS 2021/2022\nZS 2022/2023\nLS 2022/2023\nZS 2023/2024\nLS 2023/2024\nZS 2024/2025Skupiny předmětů (otevře/zavře se po kliknutí)Kódy skupin předmětů se skládají z prvního písmene (malé písmeno) označujícího šíři programů, které skupinu využívají, a přípony (velká písmena a čísla) označující charakter skupiny v rámci daného programu. Kódy prvních písmenf* (fP, fJ1 etc.)fakultně specifické skupinyc* (cP, cVOL etc.)celoškolně používané skupinyo* (oP, oV etc.)oborově specifické skupiny (bakalářské programy)h* (hP, hV etc.)oborově specifické skupiny (magisterské programy)s* (sP, sV etc.)skupiny vedlejších specializací Kódy přípon*P (oP, hP etc.)povinné předměty*V[*] (oV, hV1, cVB etc.)volitelné předměty*J[*] (fJ1, oJ2, oJV etc.)jazykově (povinně volitelné) předměty*SZ[*] (fSZ, hSZ etc.)státní zkoušky*EXC (oEXC, hEXC etc.)zakázaný předmět*VOR (cVOR, fVOR etc.)předměty nad rámec studijního plánu*ZEXCN* (cZEXCNB etc.)předměty pro výměnné programy*TVS[*] (cTVS1 etc.)tělesná výchova a sport",
+        "label": "FIS",
+        "minPercent": 0
+      },
+      {
+        "grade": "FIS",
+        "label": "N-AI-IT",
+        "minPercent": 0
+      },
+      {
+        "grade": "RI",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "VY",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "4KS",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "distanční",
+        "label": "sP",
+        "minPercent": 0
+      },
+      {
+        "grade": "4SM",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "f* (fP, fJ1 etc.)",
+        "label": "fakultně specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "c* (cP, cVOL etc.)",
+        "label": "celoškolně používané skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "o* (oP, oV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "h* (hP, hV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "s* (sP, sV etc.)",
+        "label": "skupiny vedlejších specializací",
+        "minPercent": 0
+      },
+      {
+        "grade": "*P (oP, hP etc.)",
+        "label": "povinné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*V[*] (oV, hV1, cVB etc.)",
+        "label": "volitelné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*J[*] (fJ1, oJ2, oJV etc.)",
+        "label": "jazykově",
+        "minPercent": 0
+      },
+      {
+        "grade": "*SZ[*] (fSZ, hSZ etc.)",
+        "label": "státní zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "*EXC (oEXC, hEXC etc.)",
+        "label": "zakázaný předmět",
+        "minPercent": 0
+      },
+      {
+        "grade": "*VOR (cVOR, fVOR etc.)",
+        "label": "předměty nad rámec studijního plánu",
+        "minPercent": 0
+      },
+      {
+        "grade": "*ZEXCN* (cZEXCNB etc.)",
+        "label": "předměty pro výměnné programy",
+        "minPercent": 0
+      },
+      {
+        "grade": "*TVS[*] (cTVS1 etc.)",
+        "label": "tělesná výchova a sport",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Předmět přispívá k rozvoji znalostí a dovedností studentů v oblasti analýzy a návrhu testů softwaru. Po úspěšném absolvování budou studenti schopni pro zadanou analýzu softwarového řešení navrhnout úrovně a typy testů, kterými tento software bude v praxi ověřován. Studenti budou schopni rozpracovat konkrétní testovací případy a skripty."
+    ]
+  },
+  {
+    "code": "4IT534",
+    "name": "Aplikované hluboké učení a umělá inteligence",
+    "group": "povinny",
+    "credits": 5,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=207479&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "Ing. Filip Vencovský, Ph.D.",
+    "schedule": [],
+    "semester": "ZS 2025/2026",
+    "workload": {
+      "total": 130,
+      "lectures": 10,
+      "seminars": 24,
+      "project": 42,
+      "examPrep": 0,
+      "testPrep": 20
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Aktivita na přednáškách/cvičeních/seminářích",
+        "type": "attendance",
+        "weight": 20,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Vypracování semestrální práce",
+        "type": "project",
+        "weight": 40,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Prezentace nebo obhajoba",
+        "type": "other",
+        "weight": 10,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování průběžného testu (testů)",
+        "type": "test",
+        "weight": 30,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [
+        "GÉRON, Aurélien. Hands-on machine learning with Scikit-Learn, Keras and TensorFlow : concepts, tools, and techniques to build intelligent systems. Beijing: O'Reilly, 2019. ISBN 978-1-4920-3264-9."
+      ],
+      "recommended": [
+        "KAMATH, Uday; LIU, John; WHITAKER, James. Deep learning for NLP and speech recognition. Cham: Springer, 2019. ISBN 978-3-030-14598-9."
+      ]
+    },
+    "description": "Tento kurz poskytuje studentům ucelené porozumění hlubokému učení a umělé inteligenci, které zahrnuje jak technickou, tak i byznys a lidskou perspektivu. \n\nVyvážením těchto perspektiv budou studenti lépe vybaveni pro aplikaci hlubokého učení na reálné byznys problémy a budou připraveni se informovaně rozhodovat o návrhu a vývoji řešení založených na umělé inteligenci.",
+    "allLecturers": [
+      "Ing. Karel Šafr, Ph.D.(cvičící, přednášející)",
+      "Ing. Filip Vencovský, Ph.D.(cvičící, garant, přednášející, zkoušející)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4IT534",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Aplikované hluboké učení a umělá inteligence",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Aplikované hluboké učení a umělá inteligence",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Applied deep learning and artificial intelligence",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "5",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "prezenční; 2/2",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "čeština",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "magisterský navazující",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "ZS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Karel Šafr, Ph.D.",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na přednáškách24 hÚčast na cvičeních/seminářích/tutoriálech24 hPříprava na přednášky a cvičení samostudiem10 hPříprava semestrální práce42 hPříprava prezentace nebo obhajoby10 hPříprava na průběžný test (testy)20 hCelkem130 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na přednáškách",
+        "label": "24 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "24 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "10 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava semestrální práce",
+        "label": "42 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava prezentace nebo obhajoby",
+        "label": "10 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na průběžný test (testy)",
+        "label": "20 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "130 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAktivita na přednáškách/cvičeních/seminářích20 %Vypracování semestrální práce40 %Prezentace nebo obhajoba10 %Absolvování průběžného testu (testů)30 %Celkem100 %",
+        "label": "Aktivita na přednáškách/cvičeních/seminářích",
+        "minPercent": 0
+      },
+      {
+        "grade": "Aktivita na přednáškách/cvičeních/seminářích",
+        "label": "20 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vypracování semestrální práce",
+        "label": "40 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Prezentace nebo obhajoba",
+        "label": "10 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování průběžného testu (testů)",
+        "label": "30 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Základní:GÉRON, Aurélien. Hands-on machine learning with Scikit-Learn, Keras and TensorFlow : concepts, tools, and techniques to build intelligent systems. Beijing: O'Reilly, 2019. ISBN 978-1-4920-3264-9. Doporučená:KAMATH, Uday; LIU, John; WHITAKER, James. Deep learning for NLP and speech recognition. Cham: Springer, 2019. ISBN 978-3-030-14598-9.",
+        "label": "Základní:",
+        "minPercent": 0
+      },
+      {
+        "grade": "GÉRON, Aurélien. Hands-on machine learning with Scikit-Learn, Keras and TensorFlow : concepts, tools, and techniques to build intelligent systems. Beijing: O'Reilly, 2019. ISBN 978-1-4920-3264-9.",
+        "label": "GÉRON, Aurélien. Hands-on machine learning with Scikit-Learn, Keras and TensorFlow : concepts, tools, and techniques to build intelligent systems. Beijing: O'Reilly, 2019. ISBN 978-1-4920-3264-9.",
+        "minPercent": 0
+      },
+      {
+        "grade": "KAMATH, Uday; LIU, John; WHITAKER, James. Deep learning for NLP and speech recognition. Cham: Springer, 2019. ISBN 978-3-030-14598-9.",
+        "label": "KAMATH, Uday; LIU, John; WHITAKER, James. Deep learning for NLP and speech recognition. Cham: Springer, 2019. ISBN 978-3-030-14598-9.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámka11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.202609:15-12:30\n09:15-12:30\n09:15-12:30\n09:15-12:30\n09:15-12:30IB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QMPřednáška\nPřednáška\nPřednáška\nPřednáška\nPřednáška-\n-\n-\n-\n-Ing. Filip Vencovský, Ph.D.91-11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.202612:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45IB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QMCvičení\nCvičení\nCvičení\nCvičení\nCvičení-\n-\n-\n-\n-Ing. Filip Vencovský, Ph.D.31-11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.202612:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45IB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QMCvičení\nCvičení\nCvičení\nCvičení\nCvičení-\n-\n-\n-\n-Ing. Filip Vencovský, Ph.D.30-11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.202612:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45IB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QM\nIB 202 QMCvičení\nCvičení\nCvičení\nCvičení\nCvičení-\n-\n-\n-\n-Ing. Filip Vencovský, Ph.D.30-",
+        "label": "11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.2026",
+        "label": "09:15-12:30\n09:15-12:30\n09:15-12:30\n09:15-12:30\n09:15-12:30",
+        "minPercent": 0
+      },
+      {
+        "grade": "11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.2026",
+        "label": "12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.2026",
+        "label": "12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "11.12.2025\n18.12.2025\n19.12.2025\n02.01.2026\n08.01.2026",
+        "label": "12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45\n12:45-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "FakultaKód programu/oboru/specializaceFormaSkupinaObdobíFISN-ADAprezenčníhPZS 2024/2025\nZS 2025/2026Skupiny předmětů (otevře/zavře se po kliknutí)Kódy skupin předmětů se skládají z prvního písmene (malé písmeno) označujícího šíři programů, které skupinu využívají, a přípony (velká písmena a čísla) označující charakter skupiny v rámci daného programu. Kódy prvních písmenf* (fP, fJ1 etc.)fakultně specifické skupinyc* (cP, cVOL etc.)celoškolně používané skupinyo* (oP, oV etc.)oborově specifické skupiny (bakalářské programy)h* (hP, hV etc.)oborově specifické skupiny (magisterské programy)s* (sP, sV etc.)skupiny vedlejších specializací Kódy přípon*P (oP, hP etc.)povinné předměty*V[*] (oV, hV1, cVB etc.)volitelné předměty*J[*] (fJ1, oJ2, oJV etc.)jazykově (povinně volitelné) předměty*SZ[*] (fSZ, hSZ etc.)státní zkoušky*EXC (oEXC, hEXC etc.)zakázaný předmět*VOR (cVOR, fVOR etc.)předměty nad rámec studijního plánu*ZEXCN* (cZEXCNB etc.)předměty pro výměnné programy*TVS[*] (cTVS1 etc.)tělesná výchova a sport",
+        "label": "FIS",
+        "minPercent": 0
+      },
+      {
+        "grade": "FIS",
+        "label": "N-ADA",
+        "minPercent": 0
+      },
+      {
+        "grade": "f* (fP, fJ1 etc.)",
+        "label": "fakultně specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "c* (cP, cVOL etc.)",
+        "label": "celoškolně používané skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "o* (oP, oV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "h* (hP, hV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "s* (sP, sV etc.)",
+        "label": "skupiny vedlejších specializací",
+        "minPercent": 0
+      },
+      {
+        "grade": "*P (oP, hP etc.)",
+        "label": "povinné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*V[*] (oV, hV1, cVB etc.)",
+        "label": "volitelné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*J[*] (fJ1, oJ2, oJV etc.)",
+        "label": "jazykově",
+        "minPercent": 0
+      },
+      {
+        "grade": "*SZ[*] (fSZ, hSZ etc.)",
+        "label": "státní zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "*EXC (oEXC, hEXC etc.)",
+        "label": "zakázaný předmět",
+        "minPercent": 0
+      },
+      {
+        "grade": "*VOR (cVOR, fVOR etc.)",
+        "label": "předměty nad rámec studijního plánu",
+        "minPercent": 0
+      },
+      {
+        "grade": "*ZEXCN* (cZEXCNB etc.)",
+        "label": "předměty pro výměnné programy",
+        "minPercent": 0
+      },
+      {
+        "grade": "*TVS[*] (cTVS1 etc.)",
+        "label": "tělesná výchova a sport",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [],
+    "learningOutcomes": [
+      "Po úspěšném absolvování předmětu budou studenti schopni:",
+      "- objasnit roli hlubokého učení v případech užití, jako například detekce podvodů, detekce opotřebení, kontrola kvality, predikce poptávky nebo doporučování obsahu, a vybrat související úlohy hlubokého učení, jako například detekce objektů v obraze a videu, segmentace obrazu, rozpoznání emocí, převod řeči na text nebo klasifikace zvuku a textu",
+      "- vybrat vhodné architektury hlubokého učení pro jednotlivé případy užití",
+      "- interpretovat metriky hlubokého učení a navrhnout proces učení",
+      "- navrhnout řešení postavené na umělé inteligenci s ohledem na technickou, byznys a lidskou perspektivu",
+      "- natrénovat a vyhodnotit model pomocí hlubokého učení",
+      "- vysvětlit roli přístupů zaměřených na člověka ve vývoji umělé inteligence",
+      "- posoudit přínosy a náklady na řešení postavené na umělé inteligenci",
+      "- zhodnotit dodržení pravidel a etických zásad řešení postavené na umělé inteligenci",
+      "- popsat princip a vyjmenovat příklady inteligentní automatizace"
+    ]
+  },
+  {
+    "code": "4IT563",
+    "name": "Architektury business analytiky (v angličtině)",
+    "group": "povinny",
+    "credits": 3,
+    "insisUrl": "https://insis.vse.cz/auth/katalog/syllabus.pl?predmet=215502&lang=cz&typ=1&jazyk=1&vystup=1",
+    "lecturer": "doc. Ing. Miloš Maryška, Ph.D.",
+    "schedule": [],
+    "semester": "LS 2025/2026",
+    "workload": {
+      "total": 78,
+      "lectures": 10,
+      "seminars": 26,
+      "project": 0,
+      "examPrep": 26,
+      "testPrep": 0
+    },
+    "aiSummary": "",
+    "components": [
+      {
+        "name": "Aktivita na přednáškách/cvičeních/seminářích",
+        "type": "attendance",
+        "weight": 20,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Prezentace nebo obhajoba",
+        "type": "other",
+        "weight": 30,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      },
+      {
+        "name": "Absolvování závěrečné ústní zkoušky",
+        "type": "exam",
+        "weight": 50,
+        "maxScore": null,
+        "description": "",
+        "passingScore": null
+      }
+    ],
+    "literature": {
+      "required": [
+        "JOHN, Tomcy; MISRA, Pankaj. Data lake for enterprises : leveraging lambda architecture for building enterprise data lake. Birmingham: Packt Publishing, 2017. ISBN 978-1-78728-134-9.",
+        "BRACKETT, Michael H. Data sharing : using a common data architecture. New York: John Wiley & Sons, 1994. ISBN 0-471-30993-1."
+      ],
+      "recommended": []
+    },
+    "description": "Předmět se zaměřuje na specifikaci a vysvětlení základních stavebních bloků v oblasti architektury business analytiky po stránce teoretické i praktické. Účelem je objasnit různé typy architektur v BA, jejich principy a charakteristiky a od nich odvozované přístupy k řešením. Dále pochopit data, datové zdroje, datové struktury a možnosti přístupu k datům a jejich využívání.",
+    "allLecturers": [
+      "Ing. Vít Hanzal(cvičící, zkoušející)",
+      "doc. Ing. Miloš Maryška, Ph.D.(garant)"
+    ],
+    "gradingScale": [
+      {
+        "grade": "Kód předmětu:",
+        "label": "4IT563",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název v jazyce výuky:",
+        "label": "Architectures of business analytics",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název česky:",
+        "label": "Architektury business analytiky",
+        "minPercent": 0
+      },
+      {
+        "grade": "Název anglicky:",
+        "label": "Architectures of business analytics",
+        "minPercent": 0
+      },
+      {
+        "grade": "Počet přidělených ECTS kreditů:",
+        "label": "3",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma výuky kurzu:",
+        "label": "prezenční; 0/2",
+        "minPercent": 0
+      },
+      {
+        "grade": "Forma ukončení kurzu:",
+        "label": "zkouška",
+        "minPercent": 0
+      },
+      {
+        "grade": "Jazyk výuky:",
+        "label": "angličtina",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučený typ a ročník studia:",
+        "label": "magisterský navazující",
+        "minPercent": 0
+      },
+      {
+        "grade": "Semestr:",
+        "label": "LS 2025/2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyučující:",
+        "label": "Ing. Vít Hanzal",
+        "minPercent": 0
+      },
+      {
+        "grade": "Omezení pro zápis:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Doporučené doplňky kurzu:",
+        "label": "žádné",
+        "minPercent": 0
+      },
+      {
+        "grade": "Vyžadovaná praxe:",
+        "label": "žádná",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumÚčast na cvičeních/seminářích/tutoriálech26 hPříprava na přednášky a cvičení samostudiem10 hPříprava prezentace nebo obhajoby16 hPříprava na závěrečnou ústní zkoušku26 hCelkem78 h",
+        "label": "Druh",
+        "minPercent": 0
+      },
+      {
+        "grade": "Druh",
+        "label": "Prezenční studium",
+        "minPercent": 0
+      },
+      {
+        "grade": "Účast na cvičeních/seminářích/tutoriálech",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na přednášky a cvičení samostudiem",
+        "label": "10 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava prezentace nebo obhajoby",
+        "label": "16 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Příprava na závěrečnou ústní zkoušku",
+        "label": "26 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "78 h",
+        "minPercent": 0
+      },
+      {
+        "grade": "DruhPrezenční studiumAktivita na přednáškách/cvičeních/seminářích20 %Prezentace nebo obhajoba30 %Absolvování závěrečné ústní zkoušky50 %Celkem100 %",
+        "label": "Aktivita na přednáškách/cvičeních/seminářích",
+        "minPercent": 0
+      },
+      {
+        "grade": "Aktivita na přednáškách/cvičeních/seminářích",
+        "label": "20 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Prezentace nebo obhajoba",
+        "label": "30 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Absolvování závěrečné ústní zkoušky",
+        "label": "50 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Celkem",
+        "label": "100 %",
+        "minPercent": 0
+      },
+      {
+        "grade": "Zkoušky1Výborně (90 - 100 %)2Velmi dobře (75 - 89 %)3Dobře (60 - 74 %)4Nedostatečně (0 - 59 %)ZápočtyZZapočtenoNZNezapočteno",
+        "label": "Zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "1",
+        "label": "Výborně",
+        "minPercent": 90
+      },
+      {
+        "grade": "2",
+        "label": "Velmi dobře",
+        "minPercent": 75
+      },
+      {
+        "grade": "3",
+        "label": "Dobře",
+        "minPercent": 60
+      },
+      {
+        "grade": "4",
+        "label": "Nedostatečně",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z",
+        "label": "Započteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "NZ",
+        "label": "Nezapočteno",
+        "minPercent": 0
+      },
+      {
+        "grade": "Základní:JOHN, Tomcy; MISRA, Pankaj. Data lake for enterprises : leveraging lambda architecture for building enterprise data lake. Birmingham: Packt Publishing, 2017. ISBN 978-1-78728-134-9. BRACKETT, Michael H. Data sharing : using a common data architecture. New York: John Wiley & Sons, 1994. ISBN 0-471-30993-1.",
+        "label": "Základní:",
+        "minPercent": 0
+      },
+      {
+        "grade": "JOHN, Tomcy; MISRA, Pankaj. Data lake for enterprises : leveraging lambda architecture for building enterprise data lake. Birmingham: Packt Publishing, 2017. ISBN 978-1-78728-134-9. BRACKETT, Michael H. Data sharing : using a common data architecture. New York: John Wiley & Sons, 1994. ISBN 0-471-30993-1.",
+        "label": "JOHN, Tomcy; MISRA, Pankaj. Data lake for enterprises : leveraging lambda architecture for building enterprise data lake. Birmingham: Packt Publishing, 2017. ISBN 978-1-78728-134-9.",
+        "minPercent": 0
+      },
+      {
+        "grade": "DenČasMístnostTyp akceČetnostVyučujícíKapacitaVýjimkyPoznámka26.03.2026\n16.04.2026\n23.04.202609:15-17:45\n09:15-17:45\n09:15-17:45SB 239\nSB 239\nSB 239Cvičení\nCvičení\nCvičení-\n-\n-Ing. Vít Hanzal25Your own laptop required.",
+        "label": "26.03.2026\n16.04.2026\n23.04.2026",
+        "minPercent": 0
+      },
+      {
+        "grade": "26.03.2026\n16.04.2026\n23.04.2026",
+        "label": "09:15-17:45\n09:15-17:45\n09:15-17:45",
+        "minPercent": 0
+      },
+      {
+        "grade": "FakultaKód programu/oboru/specializaceFormaSkupinaObdobíFISDABprezenčníePZS 2023/2024\nZS 2024/2025\nZS 2025/2026OZS PZAH REKZ-EXC-CEPprezenčnícZEXCNLS 2023/2024\nLS 2024/2025Z-EXC-JINNprezenčnícZEXCNLS 2023/2024\nLS 2024/2025\nLS 2025/2026Z-EXC-LLPNprezenčnícZEXCNLS 2023/2024\nLS 2024/2025\nLS 2025/2026Z-EXC-MEZprezenčnícZEXCNLS 2023/2024\nLS 2024/2025Skupiny předmětů (otevře/zavře se po kliknutí)Kódy skupin předmětů se skládají z prvního písmene (malé písmeno) označujícího šíři programů, které skupinu využívají, a přípony (velká písmena a čísla) označující charakter skupiny v rámci daného programu. Kódy prvních písmenf* (fP, fJ1 etc.)fakultně specifické skupinyc* (cP, cVOL etc.)celoškolně používané skupinyo* (oP, oV etc.)oborově specifické skupiny (bakalářské programy)h* (hP, hV etc.)oborově specifické skupiny (magisterské programy)s* (sP, sV etc.)skupiny vedlejších specializací Kódy přípon*P (oP, hP etc.)povinné předměty*V[*] (oV, hV1, cVB etc.)volitelné předměty*J[*] (fJ1, oJ2, oJV etc.)jazykově (povinně volitelné) předměty*SZ[*] (fSZ, hSZ etc.)státní zkoušky*EXC (oEXC, hEXC etc.)zakázaný předmět*VOR (cVOR, fVOR etc.)předměty nad rámec studijního plánu*ZEXCN* (cZEXCNB etc.)předměty pro výměnné programy*TVS[*] (cTVS1 etc.)tělesná výchova a sport",
+        "label": "FIS",
+        "minPercent": 0
+      },
+      {
+        "grade": "FIS",
+        "label": "DAB",
+        "minPercent": 0
+      },
+      {
+        "grade": "OZS PZAH REK",
+        "label": "Z-EXC-CEP",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z-EXC-JINN",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z-EXC-LLPN",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "Z-EXC-MEZ",
+        "label": "prezenční",
+        "minPercent": 0
+      },
+      {
+        "grade": "f* (fP, fJ1 etc.)",
+        "label": "fakultně specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "c* (cP, cVOL etc.)",
+        "label": "celoškolně používané skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "o* (oP, oV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "h* (hP, hV etc.)",
+        "label": "oborově specifické skupiny",
+        "minPercent": 0
+      },
+      {
+        "grade": "s* (sP, sV etc.)",
+        "label": "skupiny vedlejších specializací",
+        "minPercent": 0
+      },
+      {
+        "grade": "*P (oP, hP etc.)",
+        "label": "povinné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*V[*] (oV, hV1, cVB etc.)",
+        "label": "volitelné předměty",
+        "minPercent": 0
+      },
+      {
+        "grade": "*J[*] (fJ1, oJ2, oJV etc.)",
+        "label": "jazykově",
+        "minPercent": 0
+      },
+      {
+        "grade": "*SZ[*] (fSZ, hSZ etc.)",
+        "label": "státní zkoušky",
+        "minPercent": 0
+      },
+      {
+        "grade": "*EXC (oEXC, hEXC etc.)",
+        "label": "zakázaný předmět",
+        "minPercent": 0
+      },
+      {
+        "grade": "*VOR (cVOR, fVOR etc.)",
+        "label": "předměty nad rámec studijního plánu",
+        "minPercent": 0
+      },
+      {
+        "grade": "*ZEXCN* (cZEXCNB etc.)",
+        "label": "předměty pro výměnné programy",
+        "minPercent": 0
+      },
+      {
+        "grade": "*TVS[*] (cTVS1 etc.)",
+        "label": "tělesná výchova a sport",
+        "minPercent": 0
+      }
+    ],
+    "requirements": [],
+    "weeklyTopics": [
+      {
+        "week": 1,
+        "topic": "Business",
+        "content": ""
+      },
+      {
+        "week": 2,
+        "topic": "Aplikační",
+        "content": ""
+      },
+      {
+        "week": 3,
+        "topic": "Datová / informační",
+        "content": ""
+      },
+      {
+        "week": 4,
+        "topic": "Technologická",
+        "content": ""
+      },
+      {
+        "week": 5,
+        "topic": "Enteprise architektura a solution architektura",
+        "content": ""
+      },
+      {
+        "week": 6,
+        "topic": "Standardy v oblasti architektur",
+        "content": ""
+      },
+      {
+        "week": 7,
+        "topic": "Účel, využití v BA řešení",
+        "content": ""
+      },
+      {
+        "week": 8,
+        "topic": "Datové modelování",
+        "content": ""
+      },
+      {
+        "week": 9,
+        "topic": "Relevantní komponenty (DWH, Data Lake, ETL, MDM, metadatové nástroje, ODS, IoT)",
+        "content": ""
+      },
+      {
+        "week": 10,
+        "topic": "Datové principy – datové struktury, kategorie dat, využitelnost v BA úlohách",
+        "content": ""
+      },
+      {
+        "week": 11,
+        "topic": "Datová kvalita",
+        "content": ""
+      },
+      {
+        "week": 12,
+        "topic": "Master Data Management",
+        "content": ""
+      },
+      {
+        "week": 13,
+        "topic": "Reference Data Management",
+        "content": ""
+      },
+      {
+        "week": 14,
+        "topic": "Metadata Management",
+        "content": ""
+      },
+      {
+        "week": 15,
+        "topic": "Nestrukturovaná data",
+        "content": ""
+      },
+      {
+        "week": 16,
+        "topic": "Big Data",
+        "content": ""
+      },
+      {
+        "week": 17,
+        "topic": "Specifické datové zdroje",
+        "content": ""
+      },
+      {
+        "week": 18,
+        "topic": "Nástroje pro Data Management",
+        "content": ""
+      },
+      {
+        "week": 19,
+        "topic": "Operations",
+        "content": ""
+      },
+      {
+        "week": 20,
+        "topic": "Bezpečnost",
+        "content": ""
+      },
+      {
+        "week": 21,
+        "topic": "Maturity assessment",
+        "content": ""
+      },
+      {
+        "week": 22,
+        "topic": "finance – banky / pojišťovny",
+        "content": ""
+      },
+      {
+        "week": 23,
+        "topic": "farmacie / healthcare",
+        "content": ""
+      },
+      {
+        "week": 24,
+        "topic": "průmysl",
+        "content": ""
+      },
+      {
+        "week": 25,
+        "topic": "retail",
+        "content": ""
+      },
+      {
+        "week": 26,
+        "topic": "energy / utility",
+        "content": ""
+      },
+      {
+        "week": 27,
+        "topic": "telco",
+        "content": ""
+      }
+    ],
+    "learningOutcomes": [
+      "Po úspěšném absolvování budou studenti schopni diskutovat:",
+      "1. Základy práce datového architekta",
+      "2. Přínosy datové architektury pro organizaci",
+      "3. Jednotlivé typy architektur, principy a charakteristiky",
+      "4. Postupy návrhu základních stavebních bloků architektury v oblasti business analytiky",
+      "5. Jakými aspekty je nutné se zabývat v souvislosti s budováním a řízením architektury business analytiky v podniku",
+      "6. Jak jednoznačně a správně definovaná architektura napomáhá k udržitelnosti rozvoje business analytiky v organizaci"
+    ]
+  }
+]
